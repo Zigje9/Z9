@@ -4,6 +4,9 @@
 
 ### 게시판 
 
-### MERN STACK 
+### MERN STACK
+TypeScript, React 
+Mongo DB
+Node Js Express
 
 ### 자기소개, 포트폴리오, 

@@ -9,4 +9,4 @@ TypeScript, React
 Mongo DB
 Node Js Express
 
-### 자기소개, 포트폴리오, 채팅 페이지, 
+### 자기소개, 프로젝트 소개, 채팅 페이지, 

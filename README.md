@@ -10,7 +10,12 @@ Mongo DB
 Node Js Express
 GraphQL?
 Rest?
-소켓
-### 자기소개, 프로젝트 소개, 채팅 페이지, 블로그 
+emotion js
+material ui ? 
+
+
+
+소켓(없앨까)
+### 자기소개, 프로젝트 소개, 블로그 
 
 

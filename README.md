@@ -1,21 +1,15 @@
 # Z9
 
-## 블로그 & 포트폴리오 사이트
+## 포트폴리오 사이트
 
-### 게시판 
-
-### MERN STACK
+### Tech Stack
 TypeScript, React 
-Mongo DB
+MySQL
 Node Js Express
-GraphQL?
-Rest?
+GraphQL
 emotion js
-material ui ? 
+material ui  
 
-
-
-소켓(없앨까)
-### 자기소개, 프로젝트 소개, 블로그 
+### HOME / ABOUT / PORTFOLIO / CONTACT / BLOG ?
 
 

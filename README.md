@@ -8,7 +8,7 @@ MySQL
 Node Js Express
 GraphQL
 emotion js
-material ui
+디자인직접?
 
 ### 기간
 2 월말 ~ 

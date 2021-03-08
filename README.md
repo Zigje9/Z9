@@ -7,7 +7,7 @@ TypeScript, React
 MySQL
 Node Js Express
 GraphQL
-emotion js
+emotion js ? 
 디자인직접?
 
 ### 기간

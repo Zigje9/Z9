@@ -11,7 +11,7 @@ emotion js ?
 디자인직접?
 
 ### 기간
-2 월말 ~ 
+3월말에시작?..
 
 ### HOME / ABOUT / PORTFOLIO / CONTACT / BLOG ? - 연동만?
 엘리베이터 층나누듯 UI ? 

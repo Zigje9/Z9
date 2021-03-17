@@ -6,7 +6,7 @@
 TypeScript, React 
 MySQL
 Node Js Express
-GraphQL
+GraphQL ?
 emotion js ? 
 디자인직접?
 

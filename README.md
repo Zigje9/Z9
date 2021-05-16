@@ -6,7 +6,7 @@
 TypeScript, React 
 MySQL
 Node Js Express
-디자인직접?
+디자인직접 !
 
 ### 기간
 .?...

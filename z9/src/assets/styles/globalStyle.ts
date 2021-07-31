@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     overflow: auto;
+    height: 100%;
+    margin: 0;
   }
   * {
     box-sizing: border-box;

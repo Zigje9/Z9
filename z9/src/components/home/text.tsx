@@ -25,11 +25,9 @@ const TextContainer = styled.div`
   height: 50%;
   display: flex;
   overflow: hidden;
-  padding: 5%;
   flex-direction: column;
-
   @media ${(props) => props.theme.mobile} {
-    padding-top: 10%;
+    padding: 5%;
   }
 `;
 

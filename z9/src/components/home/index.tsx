@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Text from './text';
 
 const HomeContainer = styled.div`
   height: 100vh;
@@ -7,7 +8,11 @@ const HomeContainer = styled.div`
 `;
 
 const Home: React.FC = () => {
-  return <HomeContainer>d</HomeContainer>;
+  return (
+    <HomeContainer>
+      <Text />
+    </HomeContainer>
+  );
 };
 
 export default Home;

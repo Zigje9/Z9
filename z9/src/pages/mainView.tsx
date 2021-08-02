@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Home from '../components/home';
 import About from '../components/about';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
+import getCurrentPosition from '../utils/getCurrentY';
 
 const Conatiner = styled.div`
   width: 100%;
@@ -21,14 +22,25 @@ const Tempbutton = styled.button`
 
 const MainView: React.FC = () => {
   const scrollRef = useRef<HTMLInputElement[] | null>([]);
-  const [nowScroll, setNowScroll] = useState<number>(0);
+  const [currentY, setCurrentY] = useState<number>(0);
+
   const scroll = () => {
-    const num = nowScroll + 1 === 4 ? 0 : nowScroll + 1;
+    const num = getCurrentPosition(currentY);
     if (scrollRef.current !== null) {
       scrollRef.current[num].scrollIntoView({ behavior: 'smooth' });
-      setNowScroll(num);
     }
   };
+
+  const handler = () => {
+    setCurrentY(document.body.scrollTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handler, true);
+    return () => {
+      window.removeEventListener('scroll', handler, true);
+    };
+  });
 
   return (
     <>

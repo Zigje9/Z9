@@ -4,6 +4,10 @@ import Text from './text';
 import Background from './background';
 import HomeButton from './homeButton';
 
+interface HomeProps {
+  scrollRef: React.MutableRefObject<HTMLDivElement[] | any>;
+}
+
 const HomeContainer = styled.div`
   height: 100vh;
   display: flex;
@@ -11,7 +15,7 @@ const HomeContainer = styled.div`
   padding: 2%;
 `;
 
-const Home: React.FC<any> = ({ ...props }: any) => {
+const Home: React.FC<HomeProps> = ({ ...props }: HomeProps) => {
   return (
     <>
       <HomeContainer ref={(cur) => (props.scrollRef.current[0] = cur)}>

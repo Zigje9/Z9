@@ -20,12 +20,14 @@ const Tempbutton = styled.button`
 `;
 
 const MainView: React.FC = () => {
-  const scrollRef = useRef<any>([]);
+  const scrollRef = useRef<HTMLInputElement[] | null>([]);
   const [nowScroll, setNowScroll] = useState<number>(0);
   const scroll = () => {
     const num = nowScroll + 1 === 4 ? 0 : nowScroll + 1;
-    scrollRef.current[num].scrollIntoView({ behavior: 'smooth' });
-    setNowScroll(num);
+    if (scrollRef.current !== null) {
+      scrollRef.current[num].scrollIntoView({ behavior: 'smooth' });
+      setNowScroll(num);
+    }
   };
 
   return (

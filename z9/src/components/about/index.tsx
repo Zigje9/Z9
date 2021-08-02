@@ -6,8 +6,12 @@ const AboutContainer = styled.div`
   background-color: red;
 `;
 
-const About: React.FC = () => {
-  return <AboutContainer>a</AboutContainer>;
+const About: React.FC<any> = ({ ...props }: any) => {
+  return (
+    <AboutContainer ref={(cur) => (props.scrollRef.current[1] = cur)}>
+      a
+    </AboutContainer>
+  );
 };
 
 export default About;

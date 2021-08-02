@@ -11,10 +11,10 @@ const HomeContainer = styled.div`
   padding: 2%;
 `;
 
-const Home: React.FC = () => {
+const Home: React.FC<any> = ({ ...props }: any) => {
   return (
     <>
-      <HomeContainer>
+      <HomeContainer ref={(cur) => (props.scrollRef.current[0] = cur)}>
         <HomeButton />
         <Text />
       </HomeContainer>

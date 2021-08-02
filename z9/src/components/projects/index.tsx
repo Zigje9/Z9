@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 const ProjectsContainer = styled.div`
   height: 100vh;
-  background-color: black;
+  background-color: pink;
 `;
 
-const Projects: React.FC = () => {
-  return <ProjectsContainer>d</ProjectsContainer>;
+const Projects: React.FC<any> = ({ ...props }: any) => {
+  return (
+    <ProjectsContainer ref={(cur) => (props.scrollRef.current[3] = cur)}>
+      d
+    </ProjectsContainer>
+  );
 };
 
 export default Projects;

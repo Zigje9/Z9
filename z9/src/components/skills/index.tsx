@@ -6,8 +6,12 @@ const SkillsContainer = styled.div`
   background-color: blue;
 `;
 
-const Skills: React.FC = () => {
-  return <SkillsContainer>d</SkillsContainer>;
+const Skills: React.FC<any> = ({ ...props }: any) => {
+  return (
+    <SkillsContainer ref={(cur) => (props.scrollRef.current[2] = cur)}>
+      d
+    </SkillsContainer>
+  );
 };
 
 export default Skills;

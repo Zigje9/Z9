@@ -5,6 +5,7 @@ import About from '../components/about';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
 import getCurrentPosition from '../utils/getCurrentY';
+import throttle from '../utils/throttle';
 
 const Conatiner = styled.div`
   width: 100%;
@@ -24,21 +25,23 @@ const MainView: React.FC = () => {
   const scrollRef = useRef<HTMLInputElement[] | null>([]);
   const [currentY, setCurrentY] = useState<number>(0);
 
-  const scroll = () => {
+  const scrollButton = () => {
     const num = getCurrentPosition(currentY);
     if (scrollRef.current !== null) {
       scrollRef.current[num].scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const handler = () => {
+  const setCurY = () => {
     setCurrentY(document.body.scrollTop);
   };
 
+  const throttling = throttle(setCurY, 100);
+
   useEffect(() => {
-    window.addEventListener('scroll', handler, true);
+    window.addEventListener('scroll', throttling._throttling, true);
     return () => {
-      window.removeEventListener('scroll', handler, true);
+      window.removeEventListener('scroll', throttling._throttling, true);
     };
   });
 
@@ -50,7 +53,7 @@ const MainView: React.FC = () => {
         <Skills scrollRef={scrollRef} />
         <Projects scrollRef={scrollRef} />
       </Conatiner>
-      <Tempbutton onClick={() => scroll()} />
+      <Tempbutton onClick={() => scrollButton()} />
     </>
   );
 };

@@ -4,21 +4,13 @@ import Home from '../components/home';
 import About from '../components/about';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
+import ScrollButton from '../components/common/scrollButton';
 import getCurrentPosition from '../utils/getCurrentY';
 import throttle from '../utils/throttle';
 
 const Conatiner = styled.div`
   width: 100%;
   overflow-x: hidden;
-`;
-
-const Tempbutton = styled.button`
-  width: 30px;
-  height: 30px;
-  color: white;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
 `;
 
 const MainView: React.FC = () => {
@@ -53,7 +45,10 @@ const MainView: React.FC = () => {
         <Skills scrollRef={scrollRef} />
         <Projects scrollRef={scrollRef} />
       </Conatiner>
-      <Tempbutton onClick={() => scrollButton()} />
+      <ScrollButton
+        nowPos={getCurrentPosition(currentY)}
+        click={scrollButton}
+      />
     </>
   );
 };

@@ -18,3 +18,21 @@ export const blink = keyframes`
     border-color: transparent;
   }
 `;
+
+export const blink2 = keyframes`
+  0% {
+    opacity: 1
+  }
+  25% {
+    opacity: 0.5
+  }
+  50% {
+    opacity: 0
+  }
+  75% {
+    opacity: 0.5
+  }
+  100% {
+    opacity: 1
+  }
+`;

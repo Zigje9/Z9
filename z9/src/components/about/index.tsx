@@ -39,7 +39,7 @@ const About: React.FC<AboutProps> = ({ ...props }: AboutProps) => {
       <Title titleIdx={nowAbout} />
       <CarouselContainer ref={carouselRef}>
         <WhoAmI />
-        <Career />
+        <Career now={nowAbout} />
         <Experience />
       </CarouselContainer>
       <MoveButton moveLeft={moveLeft} moveRight={moveRight}></MoveButton>

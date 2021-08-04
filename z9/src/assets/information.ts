@@ -8,8 +8,8 @@ export const home = {
 };
 
 export const about = {
-  title: ['🤔 Who Am I?', '💎 Career', '🌏 Experience'],
-  name: ['94.03.15 박제구'],
+  title: ['🤔 Who Am I?', '🌳 Career', '🌏 Experience'],
+  name: ['94.03.15 박제구', 'pjkwprn@gmail.com'],
   info: [
     'JavaScript',
     '와',
@@ -26,4 +26,9 @@ export const about = {
     '소통',
     '하는 것을 좋아합니다.',
   ],
+};
+
+export const career = {
+  card1: ['GenesisLab (Intern)', 'Seoul', '2019.08.01 ~ 2019.08.30'],
+  card2: ['Free', '아직 커리어가 부족해요'],
 };

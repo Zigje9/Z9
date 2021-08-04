@@ -36,3 +36,21 @@ export const blink2 = keyframes`
     opacity: 1
   }
 `;
+
+export const drop1 = keyframes`
+  0% {
+     -webkit-transform: translateY(0vh)
+  }
+  100% {
+     -webkit-transform: translateY(50vh)
+  }
+`;
+
+export const drop2 = keyframes`
+  0% {
+     -webkit-transform: translateY(0vh)
+  }
+  100% {
+     -webkit-transform: translateY(25vh)
+  }
+`;

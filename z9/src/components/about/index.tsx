@@ -14,7 +14,6 @@ const AboutContainer = styled.div`
   width: 300vw;
   height: 100vh;
   background-color: #3d3d3d;
-  overflow: hidden;
 `;
 
 const CarouselContainer = styled.div`

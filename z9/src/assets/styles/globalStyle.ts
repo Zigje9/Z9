@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     overflow: auto;
-    height: 100vh;
+    height: 100%;
     padding: 0;
     margin: 0;
     font-family: 'Do Hyeon', sans-serif;

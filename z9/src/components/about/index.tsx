@@ -4,6 +4,8 @@ import Title from './pageTitle';
 import WhoAmI from './whoAmI';
 import Career from './career';
 import Experience from './experience';
+import MoveButton from './moveButton';
+
 interface AboutProps {
   scrollRef: React.MutableRefObject<HTMLDivElement[] | any>;
 }
@@ -15,56 +17,33 @@ const AboutContainer = styled.div`
   overflow: hidden;
 `;
 
-const Button = styled.button`
-  all: unset;
-  border: 1px solid coral;
-  padding: 0.5em 2em;
-  color: coral;
-  border-radius: 10px;
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    background-color: coral;
-    color: #fff;
-  }
-`;
 const CarouselContainer = styled.div`
   width: 100%;
   display: flex;
 `;
 
-const TOTAL_SLIDES = 2;
-
 const About: React.FC<AboutProps> = ({ ...props }: AboutProps) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideRef = useRef<any>(null);
-  const nextSlide = () => {
-    if (currentSlide >= TOTAL_SLIDES) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
-  const prevSlide = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
+  const [nowAbout, setNowAbout] = useState<number>(0);
+  const carouselRef = useRef<HTMLInputElement>(null);
+  const moveLeft = () => setNowAbout(nowAbout === 0 ? 2 : nowAbout - 1);
+  const moveRight = () => setNowAbout(nowAbout === 2 ? 0 : nowAbout + 1);
+
   useEffect(() => {
-    slideRef.current.style.transition = 'all 1s ease-in-out';
-    slideRef.current.style.transform = `translateX(-${currentSlide}00vw)`;
-  }, [currentSlide]);
+    if (carouselRef.current !== null) {
+      const changeWidth = -nowAbout * 100;
+      carouselRef.current.style.transition = `0.7s ease-in-out`;
+      carouselRef.current.style.transform = `translateX(${changeWidth}vw)`;
+    }
+  }, [nowAbout]);
   return (
     <AboutContainer ref={(cur) => (props.scrollRef.current[1] = cur)}>
-      <Title titleIdx={currentSlide} />
-      <CarouselContainer ref={slideRef}>
+      <Title titleIdx={nowAbout} />
+      <CarouselContainer ref={carouselRef}>
         <WhoAmI />
         <Career />
         <Experience />
       </CarouselContainer>
-      <Button onClick={prevSlide}>Previous Slide</Button>
-      <Button onClick={nextSlide}>Next Slide</Button>
+      <MoveButton moveLeft={moveLeft} moveRight={moveRight}></MoveButton>
     </AboutContainer>
   );
 };

@@ -10,6 +10,7 @@ import throttle from '../utils/throttle';
 
 const Conatiner = styled.div`
   width: 100%;
+  height: 100vh;
   overflow-x: hidden;
 `;
 
@@ -28,7 +29,7 @@ const MainView: React.FC = () => {
     setCurrentY(document.body.scrollTop);
   };
 
-  const throttling = throttle(setCurY, 100);
+  const throttling = throttle(setCurY, 3000);
 
   useEffect(() => {
     window.addEventListener('scroll', throttling._throttling, true);

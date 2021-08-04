@@ -6,13 +6,13 @@ const BackContainer = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
   background-color: black;
   background-image: url(${img});
   background-repeat: no-repeat;
-  background-size: 35% 100%;
-  background-position: center;
+  background-size: 35% 100vh;
+  background-position: top;
   opacity: 0.8;
   @media ${(props) => props.theme.mobile} {
     background-size: cover;

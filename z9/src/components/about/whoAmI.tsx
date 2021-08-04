@@ -18,13 +18,15 @@ const Background = styled.div`
 const WhoAmIContainer = styled.div`
   width: 85%;
   height: 75vh;
-  background: rgb(87, 82, 82);
+
+  background: rgb(34, 34, 34);
   background: linear-gradient(
     96deg,
-    rgba(87, 82, 82, 1) 0%,
-    rgba(144, 142, 140, 1) 55%,
-    rgba(214, 214, 214, 1) 100%
+    rgba(34, 34, 34, 1) 0%,
+    rgba(97, 97, 97, 1) 78%,
+    rgba(117, 117, 117, 1) 100%
   );
+  border: 3px solid white;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -49,8 +51,8 @@ const ProfileContainer = styled.div`
 `;
 
 const MyPicture = styled.img`
-  height: 85%;
-  padding: 10% 12%;
+  height: 77%;
+  padding: 5% 10%;
   @media ${(props) => props.theme.mobile} {
     width: 55%;
     height: 100%;
@@ -60,7 +62,7 @@ const MyPicture = styled.img`
 
 const NameBox = styled.div`
   width: 100%;
-  height: 20%;
+  flex-direction: column;
   @media ${(props) => props.theme.mobile} {
     height: 100%;
     display: flex;
@@ -71,7 +73,7 @@ const NameBox = styled.div`
 
 const Name = styled.p`
   color: gray;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.mobile} {
@@ -91,7 +93,7 @@ const InfoContainer = styled.div`
 const ContentBox = styled.div`
   display: flex;
   width: 100%;
-  height: 33%;
+  height: 33.3%;
 `;
 
 const GitHubIcon = styled(Github)`
@@ -251,6 +253,7 @@ const WhoAmI: React.FC = () => {
           <MyPicture src={mypicture}></MyPicture>
           <NameBox>
             <Name>{info.about.name[0]}</Name>
+            <Name>{info.about.name[1]}</Name>
           </NameBox>
         </ProfileContainer>
         <InfoContainer>
@@ -299,7 +302,7 @@ const WhoAmI: React.FC = () => {
               <TextLine>
                 <HighlightText5>{info.about.info[10]}</HighlightText5>
                 <InfoText>{info.about.info[11]}</InfoText>
-                &nbsp; &nbsp;
+                &nbsp;
                 <HighlightText5>{info.about.info[12]}</HighlightText5>
                 <InfoText>{info.about.info[13]}</InfoText>
               </TextLine>

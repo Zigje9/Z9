@@ -98,6 +98,12 @@ const GitHubIcon = styled(Github)`
   margin-left: 5%;
   width: 60px;
   color: purple;
+
+  &:hover {
+    cursor: pointer;
+    transition: all ease 0.5s;
+    -webkit-transform: rotate(45deg) scale(1.5);
+  }
   @media ${(props) => props.theme.mobile} {
     width: 35px;
   }
@@ -107,6 +113,11 @@ const BlogIcon = styled(Book)`
   margin-left: 5%;
   width: 60px;
   color: greenyellow;
+  &:hover {
+    cursor: pointer;
+    transition: all ease 0.5s;
+    -webkit-transform: rotate(45deg) scale(1.5);
+  }
   @media ${(props) => props.theme.mobile} {
     width: 35px;
   }
@@ -116,6 +127,11 @@ const MailIcon = styled(Mail)`
   margin-left: 5%;
   width: 60px;
   color: orange;
+  &:hover {
+    cursor: pointer;
+    transition: all ease 0.5s;
+    -webkit-transform: rotate(45deg) scale(1.5);
+  }
   @media ${(props) => props.theme.mobile} {
     width: 35px;
   }
@@ -239,7 +255,9 @@ const WhoAmI: React.FC = () => {
         </ProfileContainer>
         <InfoContainer>
           <ContentBox>
-            <GitHubIcon></GitHubIcon>
+            <GitHubIcon
+              onClick={() => window.open('https://github.com/Zigje9')}
+            ></GitHubIcon>
             <InfoTextBox>
               <TextLine>
                 <HighlightText1>{info.about.info[0]}</HighlightText1>
@@ -259,7 +277,9 @@ const WhoAmI: React.FC = () => {
             </InfoTextBox>
           </ContentBox>
           <ContentBox>
-            <BlogIcon></BlogIcon>
+            <BlogIcon
+              onClick={() => window.open('https://velog.io/@zigje9')}
+            ></BlogIcon>
             <InfoTextBox>
               <InfoText>{info.about.info[7]}</InfoText>
               <TextLine>
@@ -270,7 +290,11 @@ const WhoAmI: React.FC = () => {
             </InfoTextBox>
           </ContentBox>
           <ContentBox>
-            <MailIcon></MailIcon>
+            <MailIcon
+              onClick={() =>
+                window.open('https://www.linkedin.com/in/jekoo-park-316a781b4/')
+              }
+            ></MailIcon>
             <InfoTextBox>
               <TextLine>
                 <HighlightText5>{info.about.info[10]}</HighlightText5>

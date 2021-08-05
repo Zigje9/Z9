@@ -32,3 +32,18 @@ export const career = {
   card1: ['GenesisLab (Intern)', 'Seoul', '2019.08.01 ~ 2019.08.30'],
   card2: ['Free', '아직 커리어가 부족해요'],
 };
+
+export const experience = {
+  card1: [
+    'CommTECH Camp Insight 2020',
+    'ITS-인도네시아',
+    'Community and Technological Camp',
+    '20.01~20.02',
+  ],
+  card2: [
+    'Boostcamp 2020',
+    'NAVER Connect Foundation',
+    '자바스크립트 웹 풀스택 과정 챌린지 & 멤버십',
+    '20.07~20.12',
+  ],
+};

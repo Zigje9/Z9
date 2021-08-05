@@ -18,14 +18,14 @@ const Background = styled.div`
 const WhoAmIContainer = styled.div`
   width: 85%;
   height: 75vh;
-
-  background: rgb(34, 34, 34);
+  background-color: #4b605e;
+  /* background: rgb(34, 34, 34);
   background: linear-gradient(
     96deg,
     rgba(34, 34, 34, 1) 0%,
     rgba(97, 97, 97, 1) 78%,
     rgba(117, 117, 117, 1) 100%
-  );
+  ); */
   border: 3px solid white;
   border-radius: 10px;
   display: flex;
@@ -99,8 +99,7 @@ const ContentBox = styled.div`
 const GitHubIcon = styled(Github)`
   margin-left: 5%;
   width: 60px;
-  color: purple;
-
+  color: #cf94f7;
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;

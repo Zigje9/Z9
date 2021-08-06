@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import * as info from '../../assets/information';
 import * as animation from '../../assets/animation';
-import img from '../../assets/images/tree.png';
 
 interface CareerProps {
   now: number;

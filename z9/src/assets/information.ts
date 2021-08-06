@@ -47,3 +47,12 @@ export const experience = {
     '20.07~20.12',
   ],
 };
+
+export const skills = {
+  card1: ['JavaScript'],
+  card2: ['React'],
+  card3: ['HTML & CSS'],
+  card4: ['Redux'],
+  cardColor: ['#f7e017', '#61dafb', '#e54e21', '#774abc'],
+  cardPercent: [70, 60, 35, 45],
+};

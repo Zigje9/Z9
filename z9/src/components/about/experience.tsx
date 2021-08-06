@@ -75,7 +75,7 @@ const DownContainer = styled.div`
 
 const Title = styled.p`
   color: #f7bb62;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -86,7 +86,7 @@ const Title = styled.p`
 
 const Host = styled.p`
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -97,7 +97,7 @@ const Host = styled.p`
 
 const Contents = styled.p`
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -108,7 +108,7 @@ const Contents = styled.p`
 
 const Period = styled.p`
   color: #ffd760;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.mobile} {

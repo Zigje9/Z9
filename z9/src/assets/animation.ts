@@ -54,3 +54,12 @@ export const drop2 = keyframes`
      -webkit-transform: translateY(25vh)
   }
 `;
+
+export const rotateY = keyframes`
+  from {
+    transform: rotateY(-360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+`;

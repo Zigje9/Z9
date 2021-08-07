@@ -50,10 +50,14 @@ const CardBack = styled.div<CardStyleProps>`
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  background: blue;
+  background-color: #4a605f;
   transition: 0.5s linear;
   transform: ${(props) => (props.isFront ? `rotateY(-180deg)` : '')};
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 `;
 
 const Donut = styled.div<DonutProps>`
@@ -101,6 +105,14 @@ const FlipIcon = styled(Flip2)`
   }
 `;
 
+const Contents = styled.p`
+  color: white;
+  font-size: 1.5rem;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 0.5rem;
+  }
+`;
+
 const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
   const [isFront, setIsFront] = useState<boolean>(true);
   const { cardIdx } = props;
@@ -135,10 +147,44 @@ const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
             <></>
           )}
         </CardFront>
-        <CardBack
-          isFront={isFront}
-          onClick={() => setIsFront(!isFront)}
-        ></CardBack>
+        <CardBack isFront={isFront} onClick={() => setIsFront(!isFront)}>
+          {(() => {
+            switch (cardIdx) {
+              case 1:
+                return (
+                  <>
+                    <Contents>&nbsp;&nbsp;{info.skills.card1[1]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card1[2]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card1[3]}</Contents>
+                  </>
+                );
+              case 2:
+                return (
+                  <>
+                    <Contents>&nbsp;&nbsp;{info.skills.card2[1]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card2[2]}</Contents>
+                  </>
+                );
+              case 3:
+                return (
+                  <>
+                    <Contents>&nbsp;&nbsp;{info.skills.card3[1]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card3[2]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card3[3]}</Contents>
+                  </>
+                );
+              case 4:
+                return (
+                  <>
+                    <Contents>&nbsp;&nbsp;{info.skills.card4[1]}</Contents>
+                    <Contents>&nbsp;&nbsp;{info.skills.card4[2]}</Contents>
+                  </>
+                );
+              default:
+                return <></>;
+            }
+          })()}
+        </CardBack>
       </Card>
     </CardContainer>
   );

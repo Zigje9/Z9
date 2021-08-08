@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import mypicture from '../../assets/images/mypic.jpeg';
+import mypicture from '../../assets/images/mypic6.jpeg';
 import { Github } from '@styled-icons/bootstrap/Github';
 import { Book } from '@styled-icons/boxicons-regular/Book';
-import { Mail } from '@styled-icons/feather/Mail';
+import { LinkedinSquare } from '@styled-icons/boxicons-logos/LinkedinSquare';
 import * as info from '../../assets/information';
 
 const Background = styled.div`
@@ -11,23 +11,12 @@ const Background = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 75vh;
-  background-color: #3d3d3d;
+  height: 70vh;
 `;
 
 const WhoAmIContainer = styled.div`
   width: 85%;
-  height: 75vh;
-  background-color: #4b605e;
-  /* background: rgb(34, 34, 34);
-  background: linear-gradient(
-    96deg,
-    rgba(34, 34, 34, 1) 0%,
-    rgba(97, 97, 97, 1) 78%,
-    rgba(117, 117, 117, 1) 100%
-  ); */
-  border: 3px solid white;
-  border-radius: 10px;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   @media ${(props) => props.theme.mobile} {
@@ -39,10 +28,10 @@ const WhoAmIContainer = styled.div`
 const ProfileContainer = styled.div`
   width: 30%;
   height: 100%;
-  background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   @media ${(props) => props.theme.mobile} {
     flex-direction: row;
     width: 100%;
@@ -51,8 +40,8 @@ const ProfileContainer = styled.div`
 `;
 
 const MyPicture = styled.img`
-  height: 77%;
-  padding: 5% 10%;
+  height: 100%;
+  width: 80%;
   @media ${(props) => props.theme.mobile} {
     width: 55%;
     height: 100%;
@@ -61,8 +50,10 @@ const MyPicture = styled.img`
 `;
 
 const NameBox = styled.div`
-  width: 100%;
+  width: 80%;
   flex-direction: column;
+  display: flex;
+  align-items: baseline;
   @media ${(props) => props.theme.mobile} {
     height: 100%;
     display: flex;
@@ -72,8 +63,8 @@ const NameBox = styled.div`
 `;
 
 const Name = styled.p`
-  color: gray;
-  font-size: 2rem;
+  color: white;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.mobile} {
@@ -93,13 +84,16 @@ const InfoContainer = styled.div`
 const ContentBox = styled.div`
   display: flex;
   width: 100%;
-  height: 33.3%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
 `;
 
 const GitHubIcon = styled(Github)`
-  margin-left: 5%;
+  margin-left: 30px;
+  margin-right: 30px;
   width: 60px;
-  color: #cf94f7;
+  color: white;
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -111,9 +105,10 @@ const GitHubIcon = styled(Github)`
 `;
 
 const BlogIcon = styled(Book)`
-  margin-left: 5%;
+  margin-left: 30px;
+  margin-right: 30px;
   width: 60px;
-  color: greenyellow;
+  color: white;
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -124,10 +119,11 @@ const BlogIcon = styled(Book)`
   }
 `;
 
-const MailIcon = styled(Mail)`
-  margin-left: 5%;
+const MailIcon = styled(LinkedinSquare)`
+  margin-left: 30px;
+  margin-right: 30px;
   width: 60px;
-  color: orange;
+  color: white;
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -142,99 +138,23 @@ const InfoTextBox = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
 `;
 
 const InfoText = styled.p`
   color: white;
-  font-size: 1.8rem;
-  line-height: 90%;
+  font-size: 1.5rem;
+  display: flex;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;
   }
 `;
 
-const HighlightText1 = styled.p`
-  background: rgb(211, 214, 0);
-  background: linear-gradient(
-    96deg,
-    rgba(211, 214, 0, 1) 0%,
-    rgba(255, 255, 84, 1) 60%,
-    rgba(249, 255, 203, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  line-height: 90%;
-  @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
-  }
-`;
-
-const HighlightText2 = styled.p`
-  background: rgb(0, 35, 214);
-  background: linear-gradient(
-    96deg,
-    rgba(0, 35, 214, 1) 0%,
-    rgba(48, 164, 246, 1) 57%,
-    rgba(204, 234, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  line-height: 90%;
-  @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
-  }
-`;
-
-const HighlightText3 = styled.p`
-  background: rgb(134, 8, 189);
-  background: linear-gradient(
-    96deg,
-    rgba(134, 8, 189, 1) 0%,
-    rgba(179, 95, 227, 1) 57%,
-    rgba(233, 204, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  line-height: 90%;
-  @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
-  }
-`;
-
-const HighlightText4 = styled.p`
-  background: rgb(30, 184, 0);
-  background: linear-gradient(
-    96deg,
-    rgba(30, 184, 0, 1) 0%,
-    rgba(97, 238, 69, 1) 69%,
-    rgba(204, 255, 146, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  line-height: 90%;
-  @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
-  }
-`;
-
-const HighlightText5 = styled.p`
-  background: rgb(251, 86, 18);
-  background: linear-gradient(
-    96deg,
-    rgba(251, 86, 18, 1) 0%,
-    rgba(238, 159, 69, 1) 69%,
-    rgba(255, 198, 146, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
-  line-height: 90%;
+const HighlightText = styled.p`
+  color: #50658b;
+  font-size: 1.5rem;
+  display: flex;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;
   }
@@ -242,6 +162,7 @@ const HighlightText5 = styled.p`
 
 const TextLine = styled.div`
   display: flex;
+  height: 2.6rem;
 `;
 
 const WhoAmI: React.FC = () => {
@@ -250,29 +171,31 @@ const WhoAmI: React.FC = () => {
       <WhoAmIContainer>
         <ProfileContainer>
           <MyPicture src={mypicture}></MyPicture>
-          <NameBox>
-            <Name>{info.about.name[0]}</Name>
-            <Name>{info.about.name[1]}</Name>
-          </NameBox>
         </ProfileContainer>
         <InfoContainer>
+          <NameBox>
+            <Name>&nbsp; &nbsp;{info.about.name[0]}</Name>
+            <Name>&nbsp; &nbsp;{info.about.name[1]}</Name>
+          </NameBox>
           <ContentBox>
             <GitHubIcon
               onClick={() => window.open('https://github.com/Zigje9')}
             ></GitHubIcon>
             <InfoTextBox>
               <TextLine>
-                <HighlightText1>{info.about.info[0]}</HighlightText1>
+                <HighlightText>{info.about.info[0]}</HighlightText>
                 &nbsp;
                 <InfoText>{info.about.info[1]}</InfoText>
                 &nbsp;
-                <HighlightText2>{info.about.info[2]}</HighlightText2>
+                <HighlightText>{info.about.info[2]}</HighlightText>
                 &nbsp;
                 <InfoText>{info.about.info[3]}</InfoText>
               </TextLine>
-              <InfoText>{info.about.info[4]}</InfoText>
               <TextLine>
-                <HighlightText3>{info.about.info[5]}</HighlightText3>
+                <InfoText>{info.about.info[4]}</InfoText>
+              </TextLine>
+              <TextLine>
+                <HighlightText>{info.about.info[5]}</HighlightText>
                 &nbsp;
                 <InfoText>{info.about.info[6]}</InfoText>
               </TextLine>
@@ -283,11 +206,11 @@ const WhoAmI: React.FC = () => {
               onClick={() => window.open('https://velog.io/@zigje9')}
             ></BlogIcon>
             <InfoTextBox>
-              <InfoText>{info.about.info[7]}</InfoText>
               <TextLine>
-                <HighlightText4>{info.about.info[8]}</HighlightText4>
-                &nbsp;
-                <InfoText>{info.about.info[9]}</InfoText>
+                <InfoText>{info.about.info[7]}</InfoText>
+              </TextLine>
+              <TextLine>
+                <InfoText>{info.about.info[8]}</InfoText>
               </TextLine>
             </InfoTextBox>
           </ContentBox>
@@ -299,11 +222,7 @@ const WhoAmI: React.FC = () => {
             ></MailIcon>
             <InfoTextBox>
               <TextLine>
-                <HighlightText5>{info.about.info[10]}</HighlightText5>
-                <InfoText>{info.about.info[11]}</InfoText>
-                &nbsp;
-                <HighlightText5>{info.about.info[12]}</HighlightText5>
-                <InfoText>{info.about.info[13]}</InfoText>
+                <InfoText>{info.about.info[9]}</InfoText>
               </TextLine>
             </InfoTextBox>
           </ContentBox>

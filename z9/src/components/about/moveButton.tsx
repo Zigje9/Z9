@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CaretLeftSquare } from '@styled-icons/bootstrap/CaretLeftSquare';
-import { CaretRightSquare } from '@styled-icons/bootstrap/CaretRightSquare';
-
+import { ArrowLeftShort } from '@styled-icons/bootstrap/ArrowLeftShort';
+import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort';
 interface MoveProps {
-  moveLeft: () => void;
-  moveRight: () => void;
+  moveLeft?: () => void;
+  moveRight?: () => void;
+  isLeft: boolean;
 }
 
 const ButtonContainer = styled.div`
@@ -16,7 +16,7 @@ const ButtonContainer = styled.div`
   align-items: center; ;
 `;
 
-const LeftButton = styled(CaretLeftSquare)`
+const LeftButton = styled(ArrowLeftShort)`
   width: 50px;
   color: white;
   &:hover {
@@ -28,7 +28,7 @@ const LeftButton = styled(CaretLeftSquare)`
   }
 `;
 
-const RightButton = styled(CaretRightSquare)`
+const RightButton = styled(ArrowRightShort)`
   width: 50px;
   color: white;
   &:hover {
@@ -43,8 +43,11 @@ const RightButton = styled(CaretRightSquare)`
 const MoveButton: React.FC<MoveProps> = ({ ...props }: MoveProps) => {
   return (
     <ButtonContainer>
-      <LeftButton onClick={props.moveLeft} />
-      <RightButton onClick={props.moveRight} />
+      {props.isLeft ? (
+        <LeftButton onClick={props.moveLeft} />
+      ) : (
+        <RightButton onClick={props.moveRight} />
+      )}
     </ButtonContainer>
   );
 };

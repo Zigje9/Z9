@@ -38,7 +38,7 @@ const Carousel = styled.div`
   transform: rotateY(-360deg) translateZ(-500px);
   animation: ${animation.rotateY} 15s steps(1000, end) infinite;
   &:hover {
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
   }
 `;
 
@@ -51,6 +51,10 @@ const Card1 = styled.div`
   background-color: pink;
   transform: rotateY(0deg) translateZ(500px);
   border-radius: 20px;
+  &:hover {
+    background-color: green;
+    cursor: pointer;
+  }
 `;
 
 const Card2 = styled.div`
@@ -59,9 +63,16 @@ const Card2 = styled.div`
   left: 10px;
   width: 25vw;
   height: 25vh;
-  background-color: blue;
+  background-color: black;
   transform: rotateY(90deg) translateZ(500px);
   border-radius: 20px;
+  opacity: 0.6;
+  &:hover {
+    background-color: black;
+    cursor: pointer;
+    transform: rotateY(90deg) translateZ(500px) translateY(-50px);
+    opacity: 1;
+  }
 `;
 
 const Card3 = styled.div`
@@ -73,6 +84,10 @@ const Card3 = styled.div`
   background-color: red;
   transform: rotateY(180deg) translateZ(500px);
   border-radius: 20px;
+  &:hover {
+    background-color: green;
+    cursor: pointer;
+  }
 `;
 
 const Card4 = styled.div`

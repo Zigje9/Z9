@@ -20,38 +20,36 @@ const Background = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 75vh;
-  background-color: #3d3d3d;
+  height: 70vh;
 `;
 
 const CareerContainer = styled.div`
   width: 80%;
-  height: 75vh;
-  background-color: pink;
+  height: 70vh;
   border-radius: 10px;
   display: flex;
 `;
 
 const SideContainer = styled.div`
-  width: 42.5%;
+  width: 49%;
   height: 100%;
   display: flex;
-  background-color: white;
   @media ${(props) => props.theme.mobile} {
     width: 45%;
   }
 `;
 
 const CenterContainer = styled.div`
-  width: 15%;
+  width: 2%;
   height: 100%;
-  background: rgb(138, 103, 10);
+  background: rgb(174, 255, 54);
+  background: rgb(133, 224, 137);
   background: linear-gradient(
     90deg,
-    rgba(138, 103, 10, 1) 0%,
-    rgba(193, 123, 18, 1) 41%,
-    rgba(156, 83, 3, 1) 78%,
-    rgba(168, 85, 19, 1) 100%
+    rgba(133, 224, 137, 1) 0%,
+    rgba(113, 233, 118, 1) 33%,
+    rgba(64, 210, 69, 1) 77%,
+    rgba(71, 227, 77, 1) 100%
   );
   @media ${(props) => props.theme.mobile} {
     width: 10%;
@@ -60,8 +58,8 @@ const CenterContainer = styled.div`
 
 const Card = styled.div<CardProps>`
   width: 100%;
-  height: 33%;
-  border-bottom: 7px solid green;
+  height: 33.3%;
+  border-bottom: 7px solid #5ace5f;
   animation: ${(props) => props.animation};
   animation-duration: 1.2s;
   animation-timing-function: ease-out;
@@ -71,7 +69,7 @@ const Card = styled.div<CardProps>`
   margin: 0 10%;
   @media ${(props) => props.theme.mobile} {
     margin: 0 3%;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid #5ace5f;
   }
 `;
 
@@ -101,7 +99,7 @@ const HighlightText = styled.p`
 `;
 
 const Text = styled.p`
-  color: Green;
+  color: white;
   font-size: 1.7rem;
   line-height: 50%;
   @media ${(props) => props.theme.mobile} {

@@ -68,6 +68,7 @@ const Donut = styled.div<DonutProps>`
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   position: relative;
+
   @media ${(props) => props.theme.mobile} {
     width: 100px;
     height: 100px;
@@ -122,7 +123,7 @@ const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
     for (let i = 1; i <= 100; i++) {
       str += `${i}%{background: conic-gradient(${color} 0% ${
         (percent * i) / 100
-      }%, #efedda ${(percent * i) / 100}% 100%)}`;
+      }%, #dde9eb ${(percent * i) / 100}% 100%)}`;
     }
     return str;
   };

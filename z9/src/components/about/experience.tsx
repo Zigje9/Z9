@@ -6,20 +6,19 @@ const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #272325;
   width: 100%;
-  height: 75vh;
-  background-color: #3d3d3d;
+  height: 70vh;
 `;
 
 const ExperienceContainer = styled.div`
   width: 80%;
-  height: 75vh;
+  height: 70vh;
   display: flex;
 `;
 
 const TimelineContainer = styled.div`
   width: 100%;
-  background-color: #a9a9e7;
   display: flex;
   flex-direction: column;
 `;
@@ -27,7 +26,6 @@ const TimelineContainer = styled.div`
 const UpConatiner = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #a9a9e7;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -36,7 +34,6 @@ const UpConatiner = styled.div`
 const CenterContainer = styled.div`
   width: 100%;
   height: 15%;
-  background-color: #a9a9e7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +64,6 @@ const Line = styled.hr`
 const DownContainer = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #a9a9e7;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

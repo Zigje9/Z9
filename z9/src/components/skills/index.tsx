@@ -10,7 +10,7 @@ interface SkillsProps {
 const SkillsContainer = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #353530;
+  background-color: #2d2a2c;
   display: flex;
   flex-direction: column;
 `;
@@ -31,9 +31,22 @@ const CardContainer = styled.div`
   align-items: center;
 `;
 
+const TitleContainer = styled.div`
+  width: 90vw;
+  margin-left: 50px;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+  @media ${(props) => props.theme.mobile} {
+    margin-left: 20px;
+  }
+`;
+
 const Title = styled.p`
   color: white;
-  font-size: 2.5rem;
+  font-size: 6rem;
   line-height: 1%;
   @media ${(props) => props.theme.mobile} {
     font-size: 1.7rem;
@@ -55,14 +68,16 @@ const InfoIcon = styled(InformationCircle)`
 const Skills: React.FC<SkillsProps> = ({ ...props }: SkillsProps) => {
   return (
     <SkillsContainer ref={(cur) => (props.scrollRef.current[2] = cur)}>
-      <Title>
-        &nbsp; Skills
-        <InfoIcon
-          onClick={() =>
-            alert('\n\n 기술의 활용 능력 수치는 주관적으로 작성했습니다 :)')
-          }
-        />
-      </Title>
+      <TitleContainer>
+        <Title>
+          &nbsp; SKILLS
+          <InfoIcon
+            onClick={() =>
+              alert('\n\n 기술의 활용 능력 수치는 주관적으로 작성했습니다 :)')
+            }
+          ></InfoIcon>
+        </Title>
+      </TitleContainer>
       <LineContainer>
         <CardContainer>
           <CardExplain cardIdx={1}></CardExplain>

@@ -42,7 +42,7 @@ export const drop1 = keyframes`
      -webkit-transform: translateY(0vh)
   }
   100% {
-     -webkit-transform: translateY(50vh)
+     -webkit-transform: translateY(45vh)
   }
 `;
 
@@ -51,6 +51,15 @@ export const drop2 = keyframes`
      -webkit-transform: translateY(0vh)
   }
   100% {
-     -webkit-transform: translateY(25vh)
+     -webkit-transform: translateY(22vh)
+  }
+`;
+
+export const rotateY = keyframes`
+  from {
+    transform: rotateY(-360deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 `;

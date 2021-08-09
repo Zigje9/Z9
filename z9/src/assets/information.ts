@@ -77,3 +77,7 @@ export const skills = {
     'inset 0 18rem 0.1rem #774abc',
   ],
 };
+
+export const projects = {
+  footer: ['Copyright 2021. Park JeKoo. All rights reserved.'],
+};

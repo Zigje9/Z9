@@ -4,7 +4,7 @@ import * as info from '../../assets/information';
 
 const FooterContainer = styled.div`
   display: flex;
-  height: 40%;
+  height: 10vh;
   align-items: flex-end;
 `;
 

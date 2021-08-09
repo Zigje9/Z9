@@ -71,10 +71,10 @@ export const skills = {
   cardBackColor: ['#fffde8', '#d7eef1', '#ffdfc6', '#f5d1ff'],
   cardPercent: [70, 60, 35, 45],
   cardShadow: [
-    'inset 0 0 0 15rem #f7e017',
-    'inset 0 -18rem 0 0.1rem #61dafb',
-    'inset 50rem 0 0.1rem white',
-    'inset 0 18rem 0.1rem #774abc',
+    'inset 0 0 0 15vw #f7e017',
+    'inset 0 -18vw 0 0.1vw #61dafb',
+    'inset 50vw 0 0.1vw white',
+    'inset 0 18vw 0.1vw #774abc',
   ],
 };
 

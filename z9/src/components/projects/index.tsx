@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as animation from '../../assets/animation';
+import Footer from './footer';
 
 interface ProjectsProps {
   scrollRef: React.MutableRefObject<HTMLDivElement[] | any>;
@@ -14,12 +15,25 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
 `;
 
-const Title = styled.p`
-  width: 100%;
-  color: white;
-  font-size: 3rem;
+const TitleContainer = styled.div`
+  width: 90vw;
+  margin-left: 50px;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    font-size: 2rem;
+    margin-left: 20px;
+  }
+`;
+
+const Title = styled.p`
+  color: white;
+  font-size: 6rem;
+  line-height: 1%;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 1.7rem;
   }
 `;
 
@@ -104,7 +118,10 @@ const Card4 = styled.div`
 const Projects: React.FC<ProjectsProps> = ({ ...props }: ProjectsProps) => {
   return (
     <ProjectsContainer ref={(cur) => (props.scrollRef.current[3] = cur)}>
-      <Title>&nbsp; Projects</Title>
+      <TitleContainer>
+        <Title>PROJECTS</Title>
+      </TitleContainer>
+
       <CarouselContainer>
         <Carousel>
           <Card1></Card1>
@@ -113,6 +130,7 @@ const Projects: React.FC<ProjectsProps> = ({ ...props }: ProjectsProps) => {
           <Card4></Card4>
         </Carousel>
       </CarouselContainer>
+      <Footer />
     </ProjectsContainer>
   );
 };

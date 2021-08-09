@@ -47,26 +47,37 @@ export const experience = {
 export const skills = {
   card1: [
     'JavaScript',
-    '✅ ES6+ 문법에 익숙하고, 활용할 수 있습니다.',
-    '✅ JavaScript 개념에 관심이 많고, 학습하고 있습니다.',
-    '✅ TypeScript를 사용한 경험이 있고, 상세한 타입 정의를 위해 노력합니다.',
+    'ES6+ 문법에 익숙하고, 활용할 수 있습니다.',
+    'JavaScript 개념에 관심이 많고, 학습하고 있습니다.',
+    'TypeScript를 사용한 경험이 있고, 상세한 타입 정의를 위해 노력합니다.',
   ],
   card2: [
     'React',
-    '✅ 컴포넌트 구조를 이해하며, 재사용성 높은 코드를 작성한 프로젝트 경험이 많습니다.',
-    '✅ Hooks를 사용한 함수 컴포넌트의 상태를 관리할 수 있습니다.',
+    '컴포넌트 구조를 이해하며, 재사용성 높은 코드를 작성하기 위해 노력합니다.',
+    'Hooks를 사용한 함수 컴포넌트의 상태를 관리할 수 있습니다.',
   ],
   card3: [
     'HTML & CSS',
-    '✅ 시맨틱 구조의 태그를 작성하는 것이 부족하지만, 노력합니다.',
-    '✅ 반응형 웹 개발을 위해 노력합니다.',
-    '✅ Styled-Components를 적용한 프로젝트 경험이 많습니다.',
+    '시맨틱 구조의 태그를 작성하는 것이 부족하지만, 노력합니다.',
+    '반응형 웹 개발을 위해 노력합니다.',
+    'Styled-Components를 적용한 프로젝트 경험이 많습니다.',
   ],
   card4: [
     'Redux',
-    '✅ Redux의 단방향 흐름 패턴을 이해하고 전역 상태관리를 사용할 수 있습니다.',
-    '✅ Redux-Saga를 통해 사이드 이펙트와 비동기를 처리한 경험이 있습니다.',
+    'Redux의 단방향 흐름 패턴을 이해하고 전역 상태관리를 사용할 수 있습니다.',
+    'Redux-Saga를 통해 사이드 이펙트와 비동기를 처리한 경험이 있습니다.',
   ],
   cardColor: ['#f7e017', '#61dafb', '#e54e21', '#774abc'],
+  cardBackColor: ['#fffde8', '#d7eef1', '#ffdfc6', '#f5d1ff'],
   cardPercent: [70, 60, 35, 45],
+  cardShadow: [
+    'inset 0 0 0 15rem #f7e017',
+    'inset 0 -18rem 0 0.1rem #61dafb',
+    'inset 50rem 0 0.1rem white',
+    'inset 0 18rem 0.1rem #774abc',
+  ],
+};
+
+export const projects = {
+  footer: ['Copyright 2021. Park JeKoo. All rights reserved.'],
 };

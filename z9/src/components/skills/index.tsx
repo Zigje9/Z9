@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import CardExplain from './cardExplain';
 import Card from './card';
 import { InformationCircle } from '@styled-icons/heroicons-solid/InformationCircle';
 interface SkillsProps {
@@ -80,21 +79,17 @@ const Skills: React.FC<SkillsProps> = ({ ...props }: SkillsProps) => {
       </TitleContainer>
       <LineContainer>
         <CardContainer>
-          <CardExplain cardIdx={1}></CardExplain>
           <Card cardIdx={1}></Card>
         </CardContainer>
         <CardContainer>
-          <CardExplain cardIdx={2}></CardExplain>
           <Card cardIdx={2}></Card>
         </CardContainer>
       </LineContainer>
       <LineContainer>
         <CardContainer>
-          <CardExplain cardIdx={3}></CardExplain>
           <Card cardIdx={3}></Card>
         </CardContainer>
         <CardContainer>
-          <CardExplain cardIdx={4}></CardExplain>
           <Card cardIdx={4}></Card>
         </CardContainer>
       </LineContainer>

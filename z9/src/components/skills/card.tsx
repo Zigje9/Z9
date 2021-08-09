@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import CardExplain from './cardExplain';
 import * as info from '../../assets/information';
-import { Flip2 } from '@styled-icons/evaicons-solid/Flip2';
 
 interface CardProps {
   cardIdx: number;
@@ -9,6 +9,7 @@ interface CardProps {
 
 interface CardStyleProps {
   isFront: boolean;
+  cardIdx: number;
 }
 
 interface DonutProps {
@@ -32,14 +33,19 @@ const CardFront = styled.div<CardStyleProps>`
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  background: #4a605f;
   transition: 0.5s linear;
+  border: 3px solid white;
   transform: ${(props) => (props.isFront ? '' : `rotateY(180deg)`)};
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    box-shadow: ${(props) => info.skills.cardShadow[props.cardIdx - 1]};
+  }
   @media ${(props) => props.theme.mobile} {
     flex-direction: column;
   }
@@ -50,14 +56,40 @@ const CardBack = styled.div<CardStyleProps>`
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  background-color: #4a605f;
   transition: 0.5s linear;
   transform: ${(props) => (props.isFront ? `rotateY(-180deg)` : '')};
+  border: 3px solid white;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const CardBackContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const TextContainer = styled.div`
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+`;
+
+const DonutContainer = styled.div`
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Donut = styled.div<DonutProps>`
@@ -77,14 +109,16 @@ const Donut = styled.div<DonutProps>`
 
 const InDonut = styled.span`
   position: absolute;
-  background-color: white;
-  width: 100px;
-  height: 100px;
+  background-color: #2d2a2c;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
   text-align: center;
-  color: black;
-  line-height: 100px;
+  color: white;
+  line-height: 150px;
   border-radius: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(-50%, -50%);
   font-size: 1.5rem;
   @media ${(props) => props.theme.mobile} {
     width: 50px;
@@ -94,21 +128,9 @@ const InDonut = styled.span`
   }
 `;
 
-const FlipIcon = styled(Flip2)`
-  width: 50px;
-  color: white;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-  }
-  @media ${(props) => props.theme.mobile} {
-    width: 30px;
-  }
-`;
-
 const Contents = styled.p`
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.5rem;
   }
@@ -118,73 +140,93 @@ const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
   const [isFront, setIsFront] = useState<boolean>(true);
   const { cardIdx } = props;
 
-  const makeDonutAnimation = (color: string, percent: number) => {
+  const makeDonutAnimation = (
+    backColor: string,
+    color: string,
+    percent: number,
+  ) => {
     let str = ``;
     for (let i = 1; i <= 100; i++) {
       str += `${i}%{background: conic-gradient(${color} 0% ${
         (percent * i) / 100
-      }%, #dde9eb ${(percent * i) / 100}% 100%)}`;
+      }%, ${backColor} ${(percent * i) / 100}% 100%)}`;
     }
     return str;
   };
 
   const color = info.skills.cardColor[cardIdx - 1];
+  const backColor = info.skills.cardBackColor[cardIdx - 1];
   const percent = info.skills.cardPercent[cardIdx - 1];
 
-  const donutAnimation = keyframes`${makeDonutAnimation(color, percent)}`;
+  const donutAnimation = keyframes`${makeDonutAnimation(
+    backColor,
+    color,
+    percent,
+  )}`;
 
   return (
     <CardContainer>
       <Card>
-        <CardFront isFront={isFront}>
-          {isFront ? (
-            <>
-              <Donut animation={donutAnimation}>
-                <InDonut>{percent}%</InDonut>
-              </Donut>
-              <FlipIcon onClick={() => setIsFront(!isFront)}></FlipIcon>
-            </>
-          ) : (
-            <></>
-          )}
+        <CardFront
+          cardIdx={cardIdx}
+          isFront={isFront}
+          onClick={() => setIsFront(!isFront)}
+        >
+          <CardExplain cardIdx={cardIdx}></CardExplain>
         </CardFront>
-        <CardBack isFront={isFront} onClick={() => setIsFront(!isFront)}>
-          {(() => {
-            switch (cardIdx) {
-              case 1:
-                return (
-                  <>
-                    <Contents>&nbsp;&nbsp;{info.skills.card1[1]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card1[2]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card1[3]}</Contents>
-                  </>
-                );
-              case 2:
-                return (
-                  <>
-                    <Contents>&nbsp;&nbsp;{info.skills.card2[1]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card2[2]}</Contents>
-                  </>
-                );
-              case 3:
-                return (
-                  <>
-                    <Contents>&nbsp;&nbsp;{info.skills.card3[1]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card3[2]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card3[3]}</Contents>
-                  </>
-                );
-              case 4:
-                return (
-                  <>
-                    <Contents>&nbsp;&nbsp;{info.skills.card4[1]}</Contents>
-                    <Contents>&nbsp;&nbsp;{info.skills.card4[2]}</Contents>
-                  </>
-                );
-              default:
-                return <></>;
-            }
-          })()}
+        <CardBack
+          cardIdx={cardIdx}
+          isFront={isFront}
+          onClick={() => setIsFront(!isFront)}
+        >
+          <CardBackContainer>
+            {isFront ? (
+              <DonutContainer></DonutContainer>
+            ) : (
+              <DonutContainer>
+                <Donut animation={donutAnimation}>
+                  <InDonut>{percent}%</InDonut>
+                </Donut>
+              </DonutContainer>
+            )}
+
+            {(() => {
+              switch (cardIdx) {
+                case 1:
+                  return (
+                    <TextContainer>
+                      <Contents>&nbsp;&nbsp;{info.skills.card1[1]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card1[2]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card1[3]}</Contents>
+                    </TextContainer>
+                  );
+                case 2:
+                  return (
+                    <TextContainer>
+                      <Contents>&nbsp;&nbsp;{info.skills.card2[1]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card2[2]}</Contents>
+                    </TextContainer>
+                  );
+                case 3:
+                  return (
+                    <TextContainer>
+                      <Contents>&nbsp;&nbsp;{info.skills.card3[1]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card3[2]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card3[3]}</Contents>
+                    </TextContainer>
+                  );
+                case 4:
+                  return (
+                    <TextContainer>
+                      <Contents>&nbsp;&nbsp;{info.skills.card4[1]}</Contents>
+                      <Contents>&nbsp;&nbsp;{info.skills.card4[2]}</Contents>
+                    </TextContainer>
+                  );
+                default:
+                  return <TextContainer></TextContainer>;
+              }
+            })()}
+          </CardBackContainer>
         </CardBack>
       </Card>
     </CardContainer>

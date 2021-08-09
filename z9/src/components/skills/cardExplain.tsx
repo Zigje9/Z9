@@ -16,7 +16,6 @@ interface ExplainProps {
 const ExplainContainer = styled.div`
   width: 80%;
   height: 15%;
-  background-color: black;
   opacity: 0.7;
   border-radius: 10px;
   display: flex;

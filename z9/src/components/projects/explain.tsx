@@ -12,7 +12,7 @@ interface ExplainStyleProps {
 
 const ExplainContainer = styled.div`
   width: 100%;
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -23,7 +23,8 @@ const ExplainContent = styled.p<ExplainStyleProps>`
   color: white;
   font-size: 1.2rem;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    padding: 1px;
   }
 `;
 

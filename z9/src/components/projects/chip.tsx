@@ -20,6 +20,9 @@ const ChipContainer = styled.div<ChipStyleProps>`
   justify-content: center;
   align-items: center;
   margin-left: 15px;
+  @media ${(props) => props.theme.mobile} {
+    height: 25px;
+  }
 `;
 
 const ChipContent = styled.p<ChipStyleProps>`
@@ -27,7 +30,8 @@ const ChipContent = styled.p<ChipStyleProps>`
   font-size: 1rem;
   padding: 1.2rem;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
+    font-size: 0.3rem;
+    padding: 0.5rem;
   }
 `;
 

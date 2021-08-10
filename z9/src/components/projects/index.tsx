@@ -51,6 +51,12 @@ const CarouselContainer = styled.div`
   perspective: 3000px;
   display: flex;
   justify-content: flex-end;
+  @media ${(props) => props.theme.mobile} {
+    margin: 8vh 0 0 40vw;
+    width: 10vw;
+    height: 10vh;
+    perspective: 1000px;
+  }
 `;
 
 const Carousel = styled.div`
@@ -60,6 +66,11 @@ const Carousel = styled.div`
   transform-style: preserve-3d;
   transform: rotateY(-360deg) translateZ(1000px);
   animation: ${animation.rotateY} 8s steps(1000, end) infinite;
+  @media ${(props) => props.theme.mobile} {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+  }
 `;
 
 const Card1 = styled.div<CardProps>`
@@ -78,12 +89,26 @@ const Card1 = styled.div<CardProps>`
   transform: ${(props) =>
     props.projectIdx === 1
       ? `rotateY(0deg) translateZ(200px) translateY(-50px)`
-      : `rotateY(0deg) translateZ(200px);`};
+      : `rotateY(0deg) translateZ(200px)`};
   opacity: ${(props) => (props.projectIdx === 1 ? `1` : `0.4`)};
   &:hover {
     cursor: pointer;
     transform: rotateY(0deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.mobile} {
+    width: 25vw;
+    height: 12vh;
+    font-size: 0.8rem;
+    transform: ${(props) =>
+      props.projectIdx === 1
+        ? `rotateY(0deg) translateZ(100px) translateY(-35px)`
+        : `rotateY(0deg) translateZ(100px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(0deg) translateZ(100px) translateY(-35px);
+      opacity: 1;
+    }
   }
 `;
 
@@ -103,12 +128,26 @@ const Card2 = styled.div<CardProps>`
   transform: ${(props) =>
     props.projectIdx === 2
       ? `rotateY(90deg) translateZ(200px) translateY(-50px)`
-      : `rotateY(90deg) translateZ(200px);`};
+      : `rotateY(90deg) translateZ(200px)`};
   opacity: ${(props) => (props.projectIdx === 2 ? `1` : `0.4`)};
   &:hover {
     cursor: pointer;
     transform: rotateY(90deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.mobile} {
+    width: 25vw;
+    height: 12vh;
+    font-size: 0.8rem;
+    transform: ${(props) =>
+      props.projectIdx === 2
+        ? `rotateY(90deg) translateZ(100px) translateY(-35px)`
+        : `rotateY(90deg) translateZ(100px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(90deg) translateZ(100px) translateY(-35px);
+      opacity: 1;
+    }
   }
 `;
 
@@ -128,12 +167,26 @@ const Card3 = styled.div<CardProps>`
   transform: ${(props) =>
     props.projectIdx === 3
       ? `rotateY(180deg) translateZ(200px) translateY(-50px)`
-      : `rotateY(180deg) translateZ(200px);`};
+      : `rotateY(180deg) translateZ(200px)`};
   opacity: ${(props) => (props.projectIdx === 3 ? `1` : `0.4`)};
   &:hover {
     cursor: pointer;
     transform: rotateY(180deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.mobile} {
+    width: 25vw;
+    height: 12vh;
+    font-size: 0.8rem;
+    transform: ${(props) =>
+      props.projectIdx === 3
+        ? `rotateY(180deg) translateZ(100px) translateY(-35px)`
+        : `rotateY(180deg) translateZ(100px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(180deg) translateZ(100px) translateY(-35px);
+      opacity: 1;
+    }
   }
 `;
 
@@ -153,12 +206,26 @@ const Card4 = styled.div<CardProps>`
   transform: ${(props) =>
     props.projectIdx === 4
       ? `rotateY(270deg) translateZ(200px) translateY(-50px)`
-      : `rotateY(270deg) translateZ(200px);`};
+      : `rotateY(270deg) translateZ(200px)`};
   opacity: ${(props) => (props.projectIdx === 4 ? `1` : `0.4`)};
   &:hover {
     cursor: pointer;
     transform: rotateY(270deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.mobile} {
+    width: 25vw;
+    height: 12vh;
+    font-size: 0.8rem;
+    transform: ${(props) =>
+      props.projectIdx === 4
+        ? `rotateY(270deg) translateZ(100px) translateY(-35px)`
+        : `rotateY(270deg) translateZ(100px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(270deg) translateZ(100px) translateY(-35px);
+      opacity: 1;
+    }
   }
 `;
 

@@ -26,6 +26,9 @@ const ProjectTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    width: 30%;
+  }
 `;
 
 const Period = styled.div`
@@ -34,6 +37,9 @@ const Period = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    width: 30%;
+  }
 `;
 
 const IconBox = styled.div`
@@ -42,6 +48,9 @@ const IconBox = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    width: 10%;
+  }
 `;
 
 const GitHubIcon = styled(Github)`
@@ -52,6 +61,10 @@ const GitHubIcon = styled(Github)`
     cursor: pointer;
     transform: scale(1.2);
   }
+  @media ${(props) => props.theme.mobile} {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Member = styled.div`
@@ -60,6 +73,9 @@ const Member = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    width: 30%;
+  }
 `;
 
 const TitleSpan = styled.p<SpanProps>`
@@ -69,7 +85,7 @@ const TitleSpan = styled.p<SpanProps>`
   justify-content: center;
   align-items: center;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -80,7 +96,7 @@ const PeriodSpan = styled.p`
   justify-content: center;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 `;
 

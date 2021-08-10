@@ -22,7 +22,8 @@ const SubjectContent = styled.p<SubjectStyleProps>`
   justify-content: center;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 10px;
   }
 `;
 

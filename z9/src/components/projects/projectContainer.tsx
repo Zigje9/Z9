@@ -21,6 +21,9 @@ const Container = styled.div<ContainerStyleProps>`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  @media ${(props) => props.theme.mobile} {
+    width: 80vw;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -30,9 +33,13 @@ const ContentContainer = styled.div`
 
 const ChipContainer = styled.div`
   width: 100%;
-  height: 20%;
+  height: 30%;
   display: flex;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    height: 25%;
+    flex-wrap: wrap;
+  }
 `;
 
 const NullContainer = styled.div`
@@ -44,6 +51,9 @@ const NullContainer = styled.div`
   align-items: center;
   font-size: 5rem;
   color: white;
+  @media ${(props) => props.theme.mobile} {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectContainer: React.FC<ContainerProps> = ({

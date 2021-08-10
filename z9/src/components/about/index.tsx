@@ -34,7 +34,7 @@ const ProgressBox = styled.div`
   align-items: center;
   @media ${(props) => props.theme.mobile} {
     width: 80px;
-    height: 5vh;
+    height: 7vh;
   }
 `;
 

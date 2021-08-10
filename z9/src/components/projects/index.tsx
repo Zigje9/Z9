@@ -74,6 +74,7 @@ const Card1 = styled.div<CardProps>`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  color: white;
   transform: ${(props) =>
     props.projectIdx === 1
       ? `rotateY(0deg) translateZ(200px) translateY(-50px)`
@@ -98,6 +99,7 @@ const Card2 = styled.div<CardProps>`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  color: white;
   transform: ${(props) =>
     props.projectIdx === 2
       ? `rotateY(90deg) translateZ(200px) translateY(-50px)`
@@ -122,6 +124,7 @@ const Card3 = styled.div<CardProps>`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  color: white;
   transform: ${(props) =>
     props.projectIdx === 3
       ? `rotateY(180deg) translateZ(200px) translateY(-50px)`
@@ -146,6 +149,7 @@ const Card4 = styled.div<CardProps>`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  color: white;
   transform: ${(props) =>
     props.projectIdx === 4
       ? `rotateY(270deg) translateZ(200px) translateY(-50px)`

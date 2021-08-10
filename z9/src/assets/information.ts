@@ -95,6 +95,30 @@ export const projects = {
     'https://github.com/Zigje9/chatter',
   ],
   team: ['4인 프로젝트', '개인 프로젝트', '개인 프로젝트', '2인 프로젝트'],
+  subject: [
+    '부스트캠프에서 진행한 개인 또는 그룹으로 가계부를 작성하고 분석할 수 있는 가계부 웹서비스',
+    '개인 포트폴리오 사이트',
+    'Youtube API를 활용하여 영상을 검색하고, mp3 파일로 다운받을 수 있는 웹 서비스',
+    'socket.io를 활용해 단체 채팅, 개인별 채팅 서비스를 지원하는 웹 서비스',
+  ],
+  explain: [
+    [
+      'Atomic Design으로 재활용성을 고려한 컴포넌트 개발',
+      'GitHub, NAVER OAuth 2.0 인증 로직 구현',
+      '라이브러리 없이 구현한 달력, 거래내역, 가계부 초대 UI 구축',
+    ],
+    ['준비중'],
+    [
+      '쓰로틀링을 적용한 무한스크롤, 페이지네이션, 로딩처리등 UX를 고려한 컴포넌트 개발',
+      '파일 다운로드, 업로드, 삭제 작업의 프로미스를 체이닝을 통한 비동기 처리',
+      'AWS 클라우드 서비스를 활용한 웹 아키텍쳐 설계와 파일 관리',
+    ],
+    [
+      'Redux-Saga를 활용한 socket.io 사이드 이펙트 및 비동기 처리',
+      'Toast(알림) 메시지, 유저들의 Broadcasting 등의 상태관리',
+      '채팅방, 메시지등 UX를 고려한 컴포넌트 구현',
+    ],
+  ],
   chips: [
     ['TypeScript', 'React', 'Styled-Components', 'StoryBook', 'Koa'],
     ['TypeScript', 'React', 'Styled-Components'],

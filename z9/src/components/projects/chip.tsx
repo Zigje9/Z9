@@ -19,7 +19,7 @@ const ChipContainer = styled.div<ChipStyleProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
+  margin-left: 15px;
 `;
 
 const ChipContent = styled.p<ChipStyleProps>`

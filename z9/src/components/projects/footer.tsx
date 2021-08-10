@@ -5,7 +5,9 @@ import * as info from '../../assets/information';
 const FooterContainer = styled.div`
   display: flex;
   height: 10vh;
+  width: 100vw;
   align-items: flex-end;
+  margin-top: 5%;
 `;
 
 const Copyright = styled.p`
@@ -19,7 +21,7 @@ const Copyright = styled.p`
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <Copyright>{info.projects.footer[0]}</Copyright>
+      <Copyright>&nbsp;&nbsp;&nbsp; {info.projects.footer[0]}</Copyright>
     </FooterContainer>
   );
 };

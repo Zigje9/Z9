@@ -80,4 +80,19 @@ export const skills = {
 
 export const projects = {
   footer: ['Copyright 2021. Park JeKoo. All rights reserved.'],
+  borderColor: ['#f7e017', '#61dafb', '#e54e21', '#774abc'],
+  title: ['HoneyInMoney', 'Portfolio', 'Y-storage', 'Chatter'],
+  period: [
+    '2020.11.16 ~ 2020.12.18',
+    '2021.08.01 ~ 2021.08.11',
+    '2021.06.09 ~ 2021.07.06',
+    '2021.05 ~ 2021.07',
+  ],
+  link: [
+    'https://github.com/boostcamp-2020/Project16-E-Account-Book',
+    'https://github.com/Zigje9/Z9',
+    'https://github.com/Zigje9/youtube-storage',
+    'https://github.com/Zigje9/chatter',
+  ],
+  team: ['4인 프로젝트', '개인 프로젝트', '개인 프로젝트', '2인 프로젝트'],
 };

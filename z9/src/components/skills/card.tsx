@@ -73,6 +73,9 @@ const CardBackContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+  @media ${(props) => props.theme.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -82,6 +85,10 @@ const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const DonutContainer = styled.div`
@@ -90,6 +97,10 @@ const DonutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+    height: 20%;
+  }
 `;
 
 const Donut = styled.div<DonutProps>`
@@ -121,9 +132,9 @@ const InDonut = styled.span`
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   @media ${(props) => props.theme.mobile} {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
     font-size: 0.7rem;
   }
 `;
@@ -132,7 +143,7 @@ const Contents = styled.p`
   color: white;
   font-size: 1.2rem;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
   }
 `;
 

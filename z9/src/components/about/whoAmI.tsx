@@ -20,7 +20,7 @@ const WhoAmIContainer = styled.div`
   display: flex;
   flex-direction: row;
   @media ${(props) => props.theme.mobile} {
-    width: 80%;
+    width: 85%;
     flex-direction: column;
   }
 `;
@@ -34,7 +34,7 @@ const ProfileContainer = styled.div`
   align-items: flex-end;
   @media ${(props) => props.theme.mobile} {
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     height: 40%;
   }
 `;
@@ -49,16 +49,23 @@ const MyPicture = styled.img`
   }
 `;
 
+const MobileNameBox = styled.div`
+  display: none;
+  @media ${(props) => props.theme.mobile} {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+`;
+
 const NameBox = styled.div`
   width: 80%;
   flex-direction: column;
   display: flex;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 `;
 
@@ -68,7 +75,8 @@ const Name = styled.p`
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    justify-content: flex-start;
   }
 `;
 
@@ -140,6 +148,9 @@ const InfoTextBox = styled.div`
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
+  @media ${(props) => props.theme.mobile} {
+    height: 100%;
+  }
 `;
 
 const InfoText = styled.p`
@@ -163,6 +174,9 @@ const HighlightText = styled.p`
 const TextLine = styled.div`
   display: flex;
   height: 2.6rem;
+  @media ${(props) => props.theme.mobile} {
+    height: 1.2rem;
+  }
 `;
 
 const WhoAmI: React.FC = () => {
@@ -171,6 +185,10 @@ const WhoAmI: React.FC = () => {
       <WhoAmIContainer>
         <ProfileContainer>
           <MyPicture src={mypicture}></MyPicture>
+          <MobileNameBox>
+            <Name>&nbsp; &nbsp;{info.about.name[0]}</Name>
+            <Name>&nbsp; &nbsp;{info.about.name[1]}</Name>
+          </MobileNameBox>
         </ProfileContainer>
         <InfoContainer>
           <NameBox>

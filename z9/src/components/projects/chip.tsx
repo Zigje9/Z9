@@ -12,18 +12,20 @@ interface ChipStyleProps {
 }
 
 const ChipContainer = styled.div<ChipStyleProps>`
-  width: 100px;
   height: 40px;
+  display: inline-block;
   background-color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 5px;
 `;
 
 const ChipContent = styled.p<ChipStyleProps>`
   color: ${(props) => (props.idx <= 2 ? 'black' : 'white')};
   font-size: 1rem;
+  padding: 1.2rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;
   }

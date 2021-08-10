@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import * as info from '../../assets/information';
 import TitleContainer from './title';
+import Chip from './chip';
 
 interface ContainerProps {
   projectIdx: number;
@@ -30,6 +31,8 @@ const ChipContainer = styled.div`
   width: 100%;
   height: 20%;
   border: 1px solid white;
+  display: flex;
+  align-items: center;
 `;
 
 const NullContainer = styled.div`
@@ -52,7 +55,15 @@ const ProjectContainer: React.FC<ContainerProps> = ({
     <Container idx={props.projectIdx}>
       <TitleContainer projectIdx={props.projectIdx}></TitleContainer>
       <ContentContainer></ContentContainer>
-      <ChipContainer></ChipContainer>
+      <ChipContainer>
+        {info.projects.chips[props.projectIdx - 1].map((tag, idx) => {
+          return (
+            <Chip key={`${tag}_${idx}`} idx={props.projectIdx}>
+              {tag}
+            </Chip>
+          );
+        })}
+      </ChipContainer>
     </Container>
   );
 };

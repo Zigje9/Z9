@@ -95,4 +95,26 @@ export const projects = {
     'https://github.com/Zigje9/chatter',
   ],
   team: ['4인 프로젝트', '개인 프로젝트', '개인 프로젝트', '2인 프로젝트'],
+  chips: [
+    ['TypeScript', 'React', 'Styled-Components', 'StoryBook', 'Koa'],
+    ['TypeScript', 'React', 'Styled-Components'],
+    [
+      'TypeScript',
+      'React',
+      'Styled-Components',
+      'Express',
+      'Youtube-dl',
+      'AWS-EC2',
+      'AWS-S3',
+    ],
+    [
+      'JavaScript',
+      'React',
+      'Styled-Components',
+      'Redux',
+      'Redux-Saga',
+      'socket.io',
+      'express',
+    ],
+  ],
 };

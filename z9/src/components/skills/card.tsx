@@ -79,7 +79,7 @@ const CardBackContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  width: 70%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ const TextContainer = styled.div`
 `;
 
 const DonutContainer = styled.div`
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;

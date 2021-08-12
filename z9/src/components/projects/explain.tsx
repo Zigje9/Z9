@@ -23,7 +23,7 @@ const ExplainContent = styled.p<ExplainStyleProps>`
   color: white;
   font-size: 1.2rem;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.6rem;
+    font-size: 1rem;
     padding: 1px;
   }
 `;
@@ -34,7 +34,7 @@ const Subject: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
       {info.projects.explain[props.idx - 1].map((content, idx) => {
         return (
           <ExplainContent key={`${content}_${idx}`} idx={props.idx}>
-            &nbsp; &nbsp; {content}
+            {content}
           </ExplainContent>
         );
       })}

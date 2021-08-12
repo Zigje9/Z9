@@ -175,7 +175,7 @@ const TextLine = styled.div`
   display: flex;
   height: 2.6rem;
   @media ${(props) => props.theme.mobile} {
-    height: 1.2rem;
+    height: 1.3rem;
   }
 `;
 

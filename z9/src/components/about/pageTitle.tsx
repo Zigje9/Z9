@@ -15,7 +15,7 @@ const TitleContainer = styled.div`
   justify-content: space-between;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    margin-left: 20px;
+    margin-left: 2rem;
   }
 `;
 

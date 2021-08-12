@@ -21,13 +21,14 @@ const Container = styled.div<ContainerStyleProps>`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   @media ${(props) => props.theme.mobile} {
     width: 80vw;
   }
 `;
 
 const ContentContainer = styled.div`
-  width: 100%;
+  width: 90%;
   height: 60%;
 `;
 

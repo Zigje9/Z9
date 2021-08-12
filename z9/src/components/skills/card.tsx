@@ -88,6 +88,7 @@ const TextContainer = styled.div`
   @media ${(props) => props.theme.mobile} {
     width: 100%;
     height: 100%;
+    justify-content: flex-end;
   }
 `;
 
@@ -99,7 +100,7 @@ const DonutContainer = styled.div`
   align-items: center;
   @media ${(props) => props.theme.mobile} {
     width: 100%;
-    height: 20%;
+    height: 0;
   }
 `;
 
@@ -143,7 +144,7 @@ const Contents = styled.p`
   color: white;
   font-size: 1.2rem;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.3rem;
+    font-size: 1rem;
   }
 `;
 

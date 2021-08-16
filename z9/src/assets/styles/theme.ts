@@ -7,7 +7,6 @@ const size = {
 };
 
 const theme: DefaultTheme = {
-  // basicWidth: '320px',
   basicWidth: '1024px',
 
   color: {
@@ -15,7 +14,7 @@ const theme: DefaultTheme = {
     sub: '#fff',
   },
   mobile: `(max-width: ${size.mobile})`,
-  tablet: `(max-width: ${size.tablet})`,
+  tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
   pc: `(min-width: ${size.pc})`,
 };
 

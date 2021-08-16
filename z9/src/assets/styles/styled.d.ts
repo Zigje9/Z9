@@ -9,6 +9,7 @@ declare module 'styled-components' {
       sub: string;
     };
     mobile: string;
-    laptop: string;
+    tablet: string;
+    pc: string;
   }
 }

@@ -17,12 +17,12 @@ const SubjectContainer = styled.div`
 
 const SubjectContent = styled.p<SubjectStyleProps>`
   color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 10px;
   }
 `;

@@ -14,6 +14,10 @@ const BackContainer = styled.div`
   background-size: 35% 100%;
   background-position: center;
   opacity: 0.8;
+  @media ${(props) => props.theme.tablet} {
+    background-size: cover;
+    background-position: 0;
+  }
   @media ${(props) => props.theme.mobile} {
     background-size: cover;
     background-position: 0;

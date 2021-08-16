@@ -14,7 +14,9 @@ const Phrases = styled.p`
   letter-spacing: 0.1em;
   animation: ${animation.typing} 2.5s steps(30, end),
     ${animation.blink} 0.3s step-end infinite;
-
+  @media ${(props) => props.theme.tablet} {
+    font-size: 2.5rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 1.1rem;
   }

@@ -15,6 +15,7 @@ const TitleContainer = styled.div`
   justify-content: space-between;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
+    width: 100%;
     margin-left: 2rem;
   }
 `;
@@ -23,6 +24,7 @@ const Text = styled.p`
   color: white;
   font-size: 6rem;
   @media ${(props) => props.theme.mobile} {
+    width: 100%;
     font-size: 2rem;
   }
 `;

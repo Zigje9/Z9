@@ -42,6 +42,10 @@ const ProfileContainer = styled.div`
 const MyPicture = styled.img`
   height: 100%;
   width: 80%;
+  @media ${(props) => props.theme.tablet} {
+    width: 100%;
+    height: 70%;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 55%;
     height: 100%;
@@ -75,7 +79,7 @@ const Name = styled.p`
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.8rem;
+    font-size: 1rem;
     justify-content: flex-start;
   }
 `;
@@ -108,7 +112,8 @@ const GitHubIcon = styled(Github)`
     -webkit-transform: rotate(45deg) scale(1.5);
   }
   @media ${(props) => props.theme.mobile} {
-    width: 35px;
+    margin-top: 20px;
+    width: 45px;
   }
 `;
 
@@ -123,7 +128,8 @@ const BlogIcon = styled(Book)`
     -webkit-transform: rotate(45deg) scale(1.5);
   }
   @media ${(props) => props.theme.mobile} {
-    width: 35px;
+    margin-top: 20px;
+    width: 45px;
   }
 `;
 
@@ -138,7 +144,8 @@ const MailIcon = styled(LinkedinSquare)`
     -webkit-transform: rotate(45deg) scale(1.5);
   }
   @media ${(props) => props.theme.mobile} {
-    width: 35px;
+    margin-top: 20px;
+    width: 45px;
   }
 `;
 
@@ -158,7 +165,7 @@ const InfoText = styled.p`
   font-size: 1.5rem;
   display: flex;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 `;
 
@@ -167,7 +174,7 @@ const HighlightText = styled.p`
   font-size: 1.5rem;
   display: flex;
   @media ${(props) => props.theme.mobile} {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 `;
 
@@ -175,7 +182,7 @@ const TextLine = styled.div`
   display: flex;
   height: 2.6rem;
   @media ${(props) => props.theme.mobile} {
-    height: 1.3rem;
+    height: 1.5rem;
   }
 `;
 
@@ -215,7 +222,9 @@ const WhoAmI: React.FC = () => {
               <TextLine>
                 <HighlightText>{info.about.info[5]}</HighlightText>
                 &nbsp;
-                <InfoText>{info.about.info[6]}</InfoText>
+                <HighlightText>{info.about.info[6]}</HighlightText>
+                &nbsp;
+                <InfoText>{info.about.info[7]}</InfoText>
               </TextLine>
             </InfoTextBox>
           </ContentBox>
@@ -225,10 +234,10 @@ const WhoAmI: React.FC = () => {
             ></BlogIcon>
             <InfoTextBox>
               <TextLine>
-                <InfoText>{info.about.info[7]}</InfoText>
+                <InfoText>{info.about.info[8]}</InfoText>
               </TextLine>
               <TextLine>
-                <InfoText>{info.about.info[8]}</InfoText>
+                <InfoText>{info.about.info[9]}</InfoText>
               </TextLine>
             </InfoTextBox>
           </ContentBox>
@@ -240,7 +249,7 @@ const WhoAmI: React.FC = () => {
             ></MailIcon>
             <InfoTextBox>
               <TextLine>
-                <InfoText>{info.about.info[9]}</InfoText>
+                <InfoText>{info.about.info[10]}</InfoText>
               </TextLine>
             </InfoTextBox>
           </ContentBox>

@@ -21,7 +21,7 @@ const ExplainContainer = styled.div`
 
 const ExplainContent = styled.p<ExplainStyleProps>`
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.9rem;
     padding: 1px;

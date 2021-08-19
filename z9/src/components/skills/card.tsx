@@ -75,6 +75,8 @@ const CardBackContainer = styled.div`
   height: 100%;
   @media ${(props) => props.theme.mobile} {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -86,9 +88,10 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: baseline;
   @media ${(props) => props.theme.mobile} {
-    width: 100%;
+    width: 90%;
     height: 100%;
     justify-content: flex-end;
+    align-items: center;
   }
 `;
 
@@ -139,13 +142,13 @@ const InDonut = styled.span`
     width: 90px;
     height: 90px;
     line-height: 90px;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
   }
   @media ${(props) => props.theme.mobile} {
     width: 75px;
     height: 75px;
     line-height: 75px;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
 `;
 
@@ -216,24 +219,24 @@ const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
                 case 1:
                   return (
                     <TextContainer>
-                      <Contents>&nbsp;&nbsp;{info.skills.card1[1]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card1[2]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card1[3]}</Contents>
+                      <Contents>{info.skills.card1[1]}</Contents>
+                      <Contents>{info.skills.card1[2]}</Contents>
+                      <Contents>{info.skills.card1[3]}</Contents>
                     </TextContainer>
                   );
                 case 2:
                   return (
                     <TextContainer>
-                      <Contents>&nbsp;&nbsp;{info.skills.card2[1]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card2[2]}</Contents>
+                      <Contents>{info.skills.card2[1]}</Contents>
+                      <Contents>{info.skills.card2[2]}</Contents>
                     </TextContainer>
                   );
                 case 3:
                   return (
                     <TextContainer>
-                      <Contents>&nbsp;&nbsp;{info.skills.card3[1]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card3[2]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card3[3]}</Contents>
+                      <Contents>{info.skills.card3[1]}</Contents>
+                      <Contents>{info.skills.card3[2]}</Contents>
+                      <Contents>{info.skills.card3[3]}</Contents>
                     </TextContainer>
                   );
                 case 4:

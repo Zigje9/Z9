@@ -24,8 +24,8 @@ jobs:
           USER_NAME: ${{ github.event.pusher.name }}
           USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
-          git config --global user.email "$pjkwprn@gmail.com"
-          git config --global user.name "$zigje9"
+          git config --global user.email "pjkwprn@gmail.com"
+          git config --global user.name "zigje9"
 
       - name: Cache dependencies
         uses: actions/cache@v2

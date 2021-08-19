@@ -26,8 +26,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/z9/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
-      - run: npm ci && npm run deploy
+            
+      - run: npm i
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -36,3 +36,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           cname: http://www.zigje9.kro.kr
+        
+      - run: npm run deploy

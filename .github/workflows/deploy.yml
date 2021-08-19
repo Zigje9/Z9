@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
             
-      - run: cd z9 && npm i
+      - run: cd z9 && npm ci
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -37,4 +37,4 @@ jobs:
           publish_dir: ./build
           cname: http://www.zigje9.kro.kr
         
-      - run: npm run deploy
+      - run: cd z9 && npm run deploy

@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
   width: 300vw;
   height: 100vh;
   /* background-color: #262424; */
-  background-color: red;
+  background-color: yellow;
 `;
 
 const CarouselContainer = styled.div`

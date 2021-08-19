@@ -112,7 +112,10 @@ const Donut = styled.div<DonutProps>`
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   position: relative;
-
+  @media ${(props) => props.theme.tablet} {
+    width: 120px;
+    height: 120px;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 100px;
     height: 100px;
@@ -132,6 +135,12 @@ const InDonut = styled.span`
   border-radius: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
+  @media ${(props) => props.theme.tablet} {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 0.7rem;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 75px;
     height: 75px;

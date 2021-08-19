@@ -26,6 +26,9 @@ const ProjectTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    width: 25%;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 30%;
   }
@@ -37,6 +40,9 @@ const Period = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    width: 25%;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 30%;
   }
@@ -48,6 +54,9 @@ const IconBox = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    width: 20%;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 10%;
   }
@@ -73,6 +82,9 @@ const Member = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    width: 30%;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 30%;
   }

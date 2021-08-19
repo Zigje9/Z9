@@ -15,15 +15,19 @@ interface ContainerStyleProps {
 }
 
 const Container = styled.div<ContainerStyleProps>`
-  width: 50vw;
+  width: 55vw;
   height: 65vh;
   border: ${(props) => `3px solid ${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    width: 85vw;
+  }
   @media ${(props) => props.theme.mobile} {
     width: 80vw;
+    height: 55vh;
   }
 `;
 

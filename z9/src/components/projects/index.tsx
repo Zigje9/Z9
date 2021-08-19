@@ -54,7 +54,7 @@ const CarouselContainer = styled.div`
   @media ${(props) => props.theme.mobile} {
     margin: 8vh 0 0 40vw;
     width: 10vw;
-    height: 10vh;
+    height: 12vh;
     perspective: 1000px;
   }
 `;
@@ -96,6 +96,20 @@ const Card1 = styled.div<CardProps>`
     transform: rotateY(0deg) translateZ(200px) translateY(-35px);
     opacity: 1;
   }
+  @media ${(props) => props.theme.tablet} {
+    width: 20vw;
+    height: 12vh;
+    font-size: 1.5rem;
+    transform: ${(props) =>
+      props.projectIdx === 1
+        ? `rotateY(0deg) translateZ(150px) translateY(-35px)`
+        : `rotateY(0deg) translateZ(150px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(0deg) translateZ(150px) translateY(-35px);
+      opacity: 1;
+    }
+  }
   @media ${(props) => props.theme.mobile} {
     width: 25vw;
     height: 12vh;
@@ -134,6 +148,20 @@ const Card2 = styled.div<CardProps>`
     cursor: pointer;
     transform: rotateY(90deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.tablet} {
+    width: 20vw;
+    height: 12vh;
+    font-size: 1.5rem;
+    transform: ${(props) =>
+      props.projectIdx === 2
+        ? `rotateY(90deg) translateZ(150px) translateY(-35px)`
+        : `rotateY(90deg) translateZ(150px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(90deg) translateZ(150px) translateY(-35px);
+      opacity: 1;
+    }
   }
   @media ${(props) => props.theme.mobile} {
     width: 25vw;
@@ -174,6 +202,20 @@ const Card3 = styled.div<CardProps>`
     transform: rotateY(180deg) translateZ(200px) translateY(-35px);
     opacity: 1;
   }
+  @media ${(props) => props.theme.tablet} {
+    width: 20vw;
+    height: 12vh;
+    font-size: 1.5rem;
+    transform: ${(props) =>
+      props.projectIdx === 3
+        ? `rotateY(180deg) translateZ(150px) translateY(-35px)`
+        : `rotateY(180deg) translateZ(150px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(180deg) translateZ(150px) translateY(-35px);
+      opacity: 1;
+    }
+  }
   @media ${(props) => props.theme.mobile} {
     width: 25vw;
     height: 12vh;
@@ -212,6 +254,20 @@ const Card4 = styled.div<CardProps>`
     cursor: pointer;
     transform: rotateY(270deg) translateZ(200px) translateY(-35px);
     opacity: 1;
+  }
+  @media ${(props) => props.theme.tablet} {
+    width: 20vw;
+    height: 12vh;
+    font-size: 1.5rem;
+    transform: ${(props) =>
+      props.projectIdx === 4
+        ? `rotateY(270deg) translateZ(150px) translateY(-35px)`
+        : `rotateY(270deg) translateZ(150px)`};
+    &:hover {
+      cursor: pointer;
+      transform: rotateY(270deg) translateZ(150px) translateY(-35px);
+      opacity: 1;
+    }
   }
   @media ${(props) => props.theme.mobile} {
     width: 25vw;

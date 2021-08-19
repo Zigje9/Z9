@@ -12,6 +12,9 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
+      - name : intoFolder
+      - run : cd z9
+    
       - uses: actions/checkout@v2
 
       - name: Setup Node
@@ -23,11 +26,12 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/z9/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
             
-      - run: npm i
+      - run: npm ci
+      - run: npm run deploy
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

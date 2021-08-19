@@ -27,7 +27,7 @@ const ChipContainer = styled.div<ChipStyleProps>`
 
 const ChipContent = styled.p<ChipStyleProps>`
   color: ${(props) => (props.idx <= 2 ? 'black' : 'white')};
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1.2rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;

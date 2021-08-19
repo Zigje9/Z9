@@ -15,7 +15,7 @@ interface ContainerStyleProps {
 }
 
 const Container = styled.div<ContainerStyleProps>`
-  width: 55vw;
+  width: 50vw;
   height: 65vh;
   border: ${(props) => `3px solid ${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 10px;

@@ -12,7 +12,7 @@ interface ChipStyleProps {
 }
 
 const ChipContainer = styled.div<ChipStyleProps>`
-  height: 4rem;
+  height: 3.5rem;
   display: inline-block;
   background-color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 15px;
@@ -27,8 +27,11 @@ const ChipContainer = styled.div<ChipStyleProps>`
 
 const ChipContent = styled.p<ChipStyleProps>`
   color: ${(props) => (props.idx <= 2 ? 'black' : 'white')};
-  font-size: 1.3rem;
-  padding: 1.3rem;
+  font-size: 1.5rem;
+  padding: 1.1rem;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.3rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;
     padding: 0.7rem;

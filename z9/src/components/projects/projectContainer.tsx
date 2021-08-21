@@ -35,6 +35,8 @@ const Container = styled.div<ContainerStyleProps>`
 const ContentContainer = styled.div`
   width: 90%;
   height: 60%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ChipContainer = styled.div`

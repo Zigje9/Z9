@@ -12,10 +12,10 @@ interface ExplainStyleProps {
 
 const ExplainContainer = styled.div`
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
   align-items: baseline;
 `;
 
@@ -31,7 +31,7 @@ const ExplainContent = styled.p<ExplainStyleProps>`
   }
 `;
 
-const Subject: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
+const Explain: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
   return (
     <ExplainContainer>
       {info.projects.explain[props.idx - 1].map((content, idx) => {
@@ -45,4 +45,4 @@ const Subject: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
   );
 };
 
-export default Subject;
+export default Explain;

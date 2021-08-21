@@ -12,23 +12,23 @@ interface ChipStyleProps {
 }
 
 const ChipContainer = styled.div<ChipStyleProps>`
-  height: 40px;
+  height: 4rem;
   display: inline-block;
   background-color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 1rem;
   @media ${(props) => props.theme.mobile} {
-    height: 25px;
+    height: 2.5rem;
   }
 `;
 
 const ChipContent = styled.p<ChipStyleProps>`
   color: ${(props) => (props.idx <= 2 ? 'black' : 'white')};
-  font-size: 1.2rem;
-  padding: 1.2rem;
+  font-size: 1.3rem;
+  padding: 1.3rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;
     padding: 0.7rem;

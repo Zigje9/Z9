@@ -17,8 +17,7 @@ interface CircleProps {
 const AboutContainer = styled.div`
   width: 300vw;
   height: 100vh;
-  /* background-color: #262424; */
-  background-color: yellow;
+  background-color: #262424;
 `;
 
 const CarouselContainer = styled.div`

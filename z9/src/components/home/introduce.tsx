@@ -8,7 +8,7 @@ const TextLine = styled.div`
 
 const Text = styled.p`
   color: white;
-  font-size: 2rem;
+  font-size: 2.3rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
   }
@@ -24,7 +24,7 @@ const HighlightText = styled.p`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2rem;
+  font-size: 2.3rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
   }

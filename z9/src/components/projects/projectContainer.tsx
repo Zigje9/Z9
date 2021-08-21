@@ -38,7 +38,7 @@ const ContentContainer = styled.div`
 
 const ChipContainer = styled.div`
   width: 100%;
-  height: 30%;
+  height: 20%;
   display: flex;
   align-items: center;
   @media ${(props) => props.theme.mobile} {

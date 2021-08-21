@@ -15,8 +15,8 @@ interface ContainerStyleProps {
 }
 
 const Container = styled.div<ContainerStyleProps>`
-  width: 50vw;
-  height: 65vh;
+  width: 55vw;
+  height: 70vh;
   border: ${(props) => `3px solid ${info.projects.borderColor[props.idx - 1]}`};
   border-radius: 10px;
   display: flex;
@@ -24,6 +24,7 @@ const Container = styled.div<ContainerStyleProps>`
   align-items: center;
   @media ${(props) => props.theme.tablet} {
     width: 85vw;
+    height: 55vh;
   }
   @media ${(props) => props.theme.mobile} {
     width: 80vw;

@@ -92,10 +92,13 @@ const Member = styled.div`
 
 const TitleSpan = styled.p<SpanProps>`
   color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.8rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 0.8rem;
   }
@@ -103,10 +106,13 @@ const TitleSpan = styled.p<SpanProps>`
 
 const PeriodSpan = styled.p`
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.3rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 0.5rem;
   }

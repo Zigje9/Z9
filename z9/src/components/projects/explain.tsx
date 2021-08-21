@@ -12,23 +12,26 @@ interface ExplainStyleProps {
 
 const ExplainContainer = styled.div`
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
   align-items: baseline;
 `;
 
 const ExplainContent = styled.p<ExplainStyleProps>`
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.5rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 0.9rem;
     padding: 1px;
   }
 `;
 
-const Subject: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
+const Explain: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
   return (
     <ExplainContainer>
       {info.projects.explain[props.idx - 1].map((content, idx) => {
@@ -42,4 +45,4 @@ const Subject: React.FC<ExplainProps> = ({ ...props }: ExplainProps) => {
   );
 };
 
-export default Subject;
+export default Explain;

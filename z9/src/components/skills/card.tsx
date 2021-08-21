@@ -154,7 +154,10 @@ const InDonut = styled.span`
 
 const Contents = styled.p`
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.3rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
   }
@@ -242,8 +245,8 @@ const SkillCard: React.FC<CardProps> = ({ ...props }: CardProps) => {
                 case 4:
                   return (
                     <TextContainer>
-                      <Contents>&nbsp;&nbsp;{info.skills.card4[1]}</Contents>
-                      <Contents>&nbsp;&nbsp;{info.skills.card4[2]}</Contents>
+                      <Contents>{info.skills.card4[1]}</Contents>
+                      <Contents>{info.skills.card4[2]}</Contents>
                     </TextContainer>
                   );
                 default:

@@ -75,9 +75,12 @@ const NameBox = styled.div`
 
 const Name = styled.p`
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.5rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
     justify-content: flex-start;
@@ -162,8 +165,11 @@ const InfoTextBox = styled.div`
 
 const InfoText = styled.p`
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.5rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
   }
@@ -171,8 +177,11 @@ const InfoText = styled.p`
 
 const HighlightText = styled.p`
   color: #50658b;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
+  @media ${(props) => props.theme.tablet} {
+    font-size: 1.5rem;
+  }
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;
   }

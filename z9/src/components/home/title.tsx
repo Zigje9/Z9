@@ -8,7 +8,7 @@ const Phrases = styled.p`
   overflow: hidden;
   border-right: 0.1em solid white;
   color: white;
-  font-size: 4rem;
+  font-size: 4.5rem;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;

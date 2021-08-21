@@ -17,7 +17,7 @@ const SubjectContainer = styled.div`
 
 const SubjectContent = styled.p<SubjectStyleProps>`
   color: ${(props) => `${info.projects.borderColor[props.idx - 1]}`};
-  font-size: 1.6rem;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: baseline;

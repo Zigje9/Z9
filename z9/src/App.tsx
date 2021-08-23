@@ -8,8 +8,8 @@ import MainView from './pages/mainView';
 const App: React.FC = () => {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={MainView} />

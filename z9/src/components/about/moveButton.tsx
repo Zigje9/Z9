@@ -18,7 +18,7 @@ const ButtonContainer = styled.div`
 
 const LeftButton = styled(ArrowLeftShort)`
   width: 50px;
-  color: white;
+  color: ${(props) => props.theme.color.about.experienceSubText};
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -30,7 +30,7 @@ const LeftButton = styled(ArrowLeftShort)`
 
 const RightButton = styled(ArrowRightShort)`
   width: 50px;
-  color: white;
+  color: ${(props) => props.theme.color.about.experienceSubText};
   &:hover {
     cursor: pointer;
     transform: scale(1.1);

@@ -17,6 +17,15 @@ const theme: DefaultTheme = {
       background: 'black',
       text: 'white',
     },
+    about: {
+      container: '#262424',
+      whoAmIText: 'white',
+      careerText: 'white',
+      experienceText: 'white',
+      experienceSubText: 'orange',
+      moveOn: 'white',
+      moveOff: 'gray',
+    },
   },
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
@@ -33,6 +42,15 @@ const lightTheme: DefaultTheme = {
     home: {
       background: 'white',
       text: 'black',
+    },
+    about: {
+      container: '#f2f2f2',
+      whoAmIText: '#383838',
+      careerText: 'black',
+      experienceText: 'black',
+      experienceSubText: '#50658b',
+      moveOn: '#50658b',
+      moveOff: 'lightgray',
     },
   },
 

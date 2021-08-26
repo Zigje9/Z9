@@ -17,7 +17,7 @@ interface CircleProps {
 const AboutContainer = styled.div`
   width: 300vw;
   height: 100vh;
-  background-color: #262424;
+  background-color: ${(props) => props.theme.color.about.container};
 `;
 
 const CarouselContainer = styled.div`
@@ -41,7 +41,10 @@ const ProgressBox = styled.div`
 const Circle = styled.div<CircleProps>`
   width: 12.5px;
   height: 12.5px;
-  background-color: ${(props) => (props.now ? `white` : `gray`)};
+  background-color: ${(props) =>
+    props.now
+      ? props.theme.color.about.moveOn
+      : props.theme.color.about.moveOff};
   border-radius: 50%;
   align-items: center;
   justify-content: center;

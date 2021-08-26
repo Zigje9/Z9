@@ -6,7 +6,7 @@ const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #272325;
+  background-color: ${(props) => props.theme.color.about.container};
   width: 100%;
   height: 70vh;
 `;
@@ -42,9 +42,9 @@ const CenterContainer = styled.div`
 const Circle = styled.div`
   width: 35px;
   height: 35px;
-  border: 2px solid white;
+  border: 2px solid ${(props) => props.theme.color.about.experienceText};
   border-radius: 50%;
-  background-color: orange;
+  background-color: ${(props) => props.theme.color.about.experienceSubText};
   @media ${(props) => props.theme.mobile} {
     width: 22px;
     height: 22px;
@@ -54,7 +54,7 @@ const Circle = styled.div`
 const Line = styled.hr`
   width: 50%;
   height: 3px;
-  background-color: white;
+  background-color: ${(props) => props.theme.color.about.experienceText};
   border: none;
   @media ${(props) => props.theme.mobile} {
     width: 40%;
@@ -70,7 +70,7 @@ const DownContainer = styled.div`
 `;
 
 const Title = styled.p`
-  color: #f7bb62;
+  color: ${(props) => props.theme.color.about.experienceSubText};
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@ const Title = styled.p`
 `;
 
 const Host = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.experienceText};
   font-size: 1.8rem;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@ const Host = styled.p`
 `;
 
 const Contents = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.experienceText};
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@ const Contents = styled.p`
 `;
 
 const Period = styled.p`
-  color: #ffd760;
+  color: ${(props) => props.theme.color.about.experienceSubText};
   font-size: 1.7rem;
   display: flex;
   justify-content: center;

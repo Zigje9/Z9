@@ -28,7 +28,7 @@ const LightButton = styled(Sun)`
 const DarkButton = styled(MoonStarsFill)`
   width: 50px;
   height: 50px;
-  color: #fcf9b0;
+  color: steelblue;
   position: fixed;
   bottom: 20px;
   right: 80px;

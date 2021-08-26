@@ -7,7 +7,7 @@ const Phrases = styled.p`
   width: 85%;
   overflow: hidden;
   border-right: 0.1em solid white;
-  color: white;
+  color: ${(props) => props.theme.color.home.text};
   font-size: 4.5rem;
   white-space: nowrap;
   margin: 0 auto;

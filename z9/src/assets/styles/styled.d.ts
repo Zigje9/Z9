@@ -7,6 +7,11 @@ declare module 'styled-components' {
     color: {
       main: string;
       sub: string;
+
+      home: {
+        background: string;
+        text: string;
+      };
     };
     mobile: string;
     tablet: string;

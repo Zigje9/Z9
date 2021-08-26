@@ -7,7 +7,7 @@ const TextLine = styled.div`
 `;
 
 const Text = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.home.text};
   font-size: 2.3rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 1rem;

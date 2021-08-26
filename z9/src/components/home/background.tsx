@@ -8,8 +8,7 @@ const BackContainer = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* background-color: black; */
-  background-color: ${(props) => props.theme.color.main};
+  background-color: ${(props) => props.theme.color.home.background};
   background-image: url(${img});
   background-repeat: no-repeat;
   background-size: 35% 100%;

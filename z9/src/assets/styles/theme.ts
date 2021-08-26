@@ -12,6 +12,11 @@ const theme: DefaultTheme = {
   color: {
     main: '#1c1f25',
     sub: '#fff',
+
+    home: {
+      background: 'black',
+      text: 'white',
+    },
   },
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
@@ -22,9 +27,15 @@ const lightTheme: DefaultTheme = {
   basicWidth: '1024px',
 
   color: {
-    main: 'orange',
+    main: '#1c1f25',
     sub: '#fff',
+
+    home: {
+      background: 'white',
+      text: 'black',
+    },
   },
+
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
   pc: `(min-width: ${size.pc})`,

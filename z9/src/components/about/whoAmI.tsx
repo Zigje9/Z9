@@ -74,7 +74,7 @@ const NameBox = styled.div`
 `;
 
 const Name = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ const GitHubIcon = styled(Github)`
   margin-left: 30px;
   margin-right: 30px;
   width: 60px;
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -124,7 +124,7 @@ const BlogIcon = styled(Book)`
   margin-left: 30px;
   margin-right: 30px;
   width: 60px;
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -140,7 +140,7 @@ const MailIcon = styled(LinkedinSquare)`
   margin-left: 30px;
   margin-right: 30px;
   width: 60px;
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   &:hover {
     cursor: pointer;
     transition: all ease 0.5s;
@@ -164,7 +164,7 @@ const InfoTextBox = styled.div`
 `;
 
 const InfoText = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   font-size: 1.8rem;
   display: flex;
   @media ${(props) => props.theme.tablet} {

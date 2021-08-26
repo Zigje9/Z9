@@ -7,6 +7,20 @@ declare module 'styled-components' {
     color: {
       main: string;
       sub: string;
+
+      home: {
+        background: string;
+        text: string;
+      };
+      about: {
+        container: string;
+        whoAmIText: string;
+        careerText: string;
+        experienceText: string;
+        experienceSubText: string;
+        moveOn: string;
+        moveOff: string;
+      };
     };
     mobile: string;
     tablet: string;

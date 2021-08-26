@@ -21,7 +21,7 @@ const TitleContainer = styled.div`
 `;
 
 const Text = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.whoAmIText};
   font-size: 6rem;
   @media ${(props) => props.theme.mobile} {
     width: 100%;

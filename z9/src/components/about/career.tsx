@@ -99,7 +99,7 @@ const HighlightText = styled.p`
 `;
 
 const Text = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.about.careerText};
   font-size: 1.7rem;
   line-height: 50%;
   @media ${(props) => props.theme.mobile} {

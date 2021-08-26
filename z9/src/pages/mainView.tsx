@@ -6,19 +6,13 @@ import About from '../components/about';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
 import ScrollButton from '../components/common/scrollButton';
+import ModeButton from '../components/common/modeButton';
 import getCurrentPosition from '../utils/getCurrentY';
 import throttle from '../utils/throttle';
 
 const Conatiner = styled.div`
   width: 100%;
   overflow-x: hidden;
-`;
-
-const TempButton = styled.button`
-  top: 0;
-  position: absolute;
-  width: 50px;
-  height: 50px;
 `;
 
 const MainView: React.FC = () => {
@@ -38,6 +32,10 @@ const MainView: React.FC = () => {
   };
 
   const throttling = throttle(setCurY, 3000);
+
+  const modeChange = () => {
+    setIsDark(!isDark);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', throttling._throttling, true);
@@ -59,7 +57,7 @@ const MainView: React.FC = () => {
           nowPos={getCurrentPosition(currentY)}
           click={scrollButton}
         />
-        <TempButton onClick={() => setIsDark(!isDark)}></TempButton>
+        <ModeButton nowMode={isDark} click={modeChange} />
       </ThemeProvider>
     </>
   );

@@ -22,7 +22,7 @@ const lightTheme: DefaultTheme = {
   basicWidth: '1024px',
 
   color: {
-    main: 'pink',
+    main: 'orange',
     sub: '#fff',
   },
   mobile: `(max-width: ${size.mobile})`,

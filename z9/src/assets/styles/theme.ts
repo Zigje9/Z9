@@ -18,4 +18,16 @@ const theme: DefaultTheme = {
   pc: `(min-width: ${size.pc})`,
 };
 
-export { theme };
+const lightTheme: DefaultTheme = {
+  basicWidth: '1024px',
+
+  color: {
+    main: 'pink',
+    sub: '#fff',
+  },
+  mobile: `(max-width: ${size.mobile})`,
+  tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
+  pc: `(min-width: ${size.pc})`,
+};
+
+export { theme, lightTheme };

@@ -18,11 +18,16 @@ declare module 'styled-components' {
         careerText: string;
         experienceText: string;
         experienceSubText: string;
+        moveArrow: string;
         moveOn: string;
         moveOff: string;
       };
       common: {
         scrollButton: string;
+      };
+      skills: {
+        background: string;
+        text: string;
       };
     };
     mobile: string;

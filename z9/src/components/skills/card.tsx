@@ -34,7 +34,7 @@ const CardFront = styled.div<CardStyleProps>`
   width: 100%;
   backface-visibility: hidden;
   transition: 0.5s linear;
-  border: 3px solid white;
+  border: 3px solid ${(props) => props.theme.color.skills.text};
   transform: ${(props) => (props.isFront ? '' : `rotateY(180deg)`)};
   border-radius: 20px;
   display: flex;
@@ -58,7 +58,7 @@ const CardBack = styled.div<CardStyleProps>`
   backface-visibility: hidden;
   transition: 0.5s linear;
   transform: ${(props) => (props.isFront ? `rotateY(-180deg)` : '')};
-  border: 3px solid white;
+  border: 3px solid ${(props) => props.theme.color.skills.text};
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -127,13 +127,13 @@ const Donut = styled.div<DonutProps>`
 
 const InDonut = styled.span`
   position: absolute;
-  background-color: #2d2a2c;
+  background-color: ${(props) => props.theme.color.skills.background};
   width: 150px;
   height: 150px;
   top: 50%;
   left: 50%;
   text-align: center;
-  color: white;
+  color: ${(props) => props.theme.color.skills.text};
   line-height: 150px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -153,7 +153,7 @@ const InDonut = styled.span`
 `;
 
 const Contents = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.skills.text};
   font-size: 1.6rem;
   @media ${(props) => props.theme.tablet} {
     font-size: 1.3rem;

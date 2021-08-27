@@ -68,7 +68,7 @@ const CSSIcon = styled(Css3)`
 `;
 
 const Title = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.skills.text};
   font-size: 1.5rem;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;

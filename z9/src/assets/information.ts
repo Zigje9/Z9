@@ -74,7 +74,7 @@ export const skills = {
   cardShadow: [
     'inset 0 0 0 30rem #f7e017',
     'inset 0 -30rem 0 0.1rem #61dafb',
-    'inset 70rem 0 0.1rem white',
+    'inset 70rem 0 0.1rem #e54e21',
     'inset 0 30rem 0.1rem #774abc',
   ],
 };

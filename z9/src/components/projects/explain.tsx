@@ -20,7 +20,7 @@ const ExplainContainer = styled.div`
 `;
 
 const ExplainContent = styled.p<ExplainStyleProps>`
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   font-size: 1.8rem;
   @media ${(props) => props.theme.tablet} {
     font-size: 1.5rem;

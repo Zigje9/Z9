@@ -34,6 +34,10 @@ const theme: DefaultTheme = {
       background: '#2d2a2c',
       text: 'white',
     },
+    projects: {
+      background: '#262424',
+      text: '#f2f2f2',
+    },
   },
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
@@ -67,6 +71,10 @@ const lightTheme: DefaultTheme = {
     skills: {
       background: 'white',
       text: '#2d2a2c',
+    },
+    projects: {
+      background: '#f2f2f2',
+      text: '#262424',
     },
   },
 

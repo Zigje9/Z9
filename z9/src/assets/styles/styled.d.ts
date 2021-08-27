@@ -29,6 +29,10 @@ declare module 'styled-components' {
         background: string;
         text: string;
       };
+      projects: {
+        background: string;
+        text: string;
+      };
     };
     mobile: string;
     tablet: string;

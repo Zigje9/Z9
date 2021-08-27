@@ -12,7 +12,7 @@ interface ScrollProps {
 const DownButton = styled(ChevronsDown)`
   width: 70px;
   height: 70px;
-  color: white;
+  color: ${(props) => props.theme.color.common.scrollButton};
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -29,7 +29,7 @@ const DownButton = styled(ChevronsDown)`
 const HomeButton = styled(Home)`
   width: 70px;
   height: 70px;
-  color: white;
+  color: ${(props) => props.theme.color.common.scrollButton};
   position: fixed;
   bottom: 10px;
   right: 10px;

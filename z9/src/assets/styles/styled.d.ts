@@ -21,6 +21,9 @@ declare module 'styled-components' {
         moveOn: string;
         moveOff: string;
       };
+      common: {
+        scrollButton: string;
+      };
     };
     mobile: string;
     tablet: string;

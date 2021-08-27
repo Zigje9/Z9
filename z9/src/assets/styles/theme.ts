@@ -26,6 +26,9 @@ const theme: DefaultTheme = {
       moveOn: 'white',
       moveOff: 'gray',
     },
+    common: {
+      scrollButton: 'white',
+    },
   },
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(min-width: ${size.mobile}) and (max-width: ${size.tablet})`,
@@ -51,6 +54,9 @@ const lightTheme: DefaultTheme = {
       experienceSubText: '#50658b',
       moveOn: '#50658b',
       moveOff: 'lightgray',
+    },
+    common: {
+      scrollButton: '#50658b',
     },
   },
 

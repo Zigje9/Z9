@@ -23,8 +23,20 @@ const theme: DefaultTheme = {
       careerText: 'white',
       experienceText: 'white',
       experienceSubText: 'orange',
+      moveArrow: 'white',
       moveOn: 'white',
       moveOff: 'gray',
+    },
+    common: {
+      scrollButton: 'white',
+    },
+    skills: {
+      background: '#2d2a2c',
+      text: 'white',
+    },
+    projects: {
+      background: '#262424',
+      text: '#f2f2f2',
     },
   },
   mobile: `(max-width: ${size.mobile})`,
@@ -49,8 +61,20 @@ const lightTheme: DefaultTheme = {
       careerText: 'black',
       experienceText: 'black',
       experienceSubText: '#50658b',
+      moveArrow: '#50658b',
       moveOn: '#50658b',
       moveOff: 'lightgray',
+    },
+    common: {
+      scrollButton: '#50658b',
+    },
+    skills: {
+      background: 'white',
+      text: '#2d2a2c',
+    },
+    projects: {
+      background: '#f2f2f2',
+      text: '#262424',
     },
   },
 

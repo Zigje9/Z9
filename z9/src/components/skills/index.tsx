@@ -9,7 +9,7 @@ interface SkillsProps {
 const SkillsContainer = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #2d2a2c;
+  background-color: ${(props) => props.theme.color.skills.background};
   display: flex;
   flex-direction: column;
 `;
@@ -44,7 +44,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.skills.text};
   font-size: 6rem;
   line-height: 1%;
   @media ${(props) => props.theme.mobile} {
@@ -54,7 +54,7 @@ const Title = styled.p`
 
 const InfoIcon = styled(InformationCircle)`
   width: 40px;
-  color: white;
+  color: ${(props) => props.theme.color.skills.text};
   &:hover {
     cursor: pointer;
     transform: scale(1.2);

@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
 `;
 
 const Copyright = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   font-size: 1.2em;
   @media ${(props) => props.theme.mobile} {
     font-size: 0.7rem;

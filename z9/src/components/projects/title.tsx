@@ -65,7 +65,7 @@ const IconBox = styled.div`
 const GitHubIcon = styled(Github)`
   width: 40px;
   height: 40px;
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
@@ -105,7 +105,7 @@ const TitleSpan = styled.p<SpanProps>`
 `;
 
 const PeriodSpan = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   font-size: 1.8rem;
   display: flex;
   justify-content: center;

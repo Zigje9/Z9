@@ -74,7 +74,7 @@ export const skills = {
   cardShadow: [
     'inset 0 0 0 30rem #f7e017',
     'inset 0 -30rem 0 0.1rem #61dafb',
-    'inset 70rem 0 0.1rem white',
+    'inset 70rem 0 0.1rem #e54e21',
     'inset 0 30rem 0.1rem #774abc',
   ],
 };
@@ -110,7 +110,8 @@ export const projects = {
     ],
     [
       '흥미로운 UI를 위해 keyframe 과 css를 활용한 애니메이션 컴포넌트 개발',
-      '모바일 View 와 데스크탑 View를 고려한 반응형 사이트',
+      'Mobile, Tablet, Desktop View를 고려한 반응형 사이트',
+      '다크모드와 라이트모드 구현',
     ],
     [
       '쓰로틀링 적용한 무한스크롤, 페이지네이션, 로딩처리등 UX 고려한 컴포넌트 개발',

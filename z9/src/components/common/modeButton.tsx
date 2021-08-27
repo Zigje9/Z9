@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MoonStarsFill } from '@styled-icons/bootstrap/MoonStarsFill';
 import { Sun } from '@styled-icons/fa-solid/Sun';
+import * as animation from '../../assets/animation';
 
 interface ModeProps {
   nowMode: boolean;
@@ -15,6 +16,7 @@ const LightButton = styled(Sun)`
   position: fixed;
   bottom: 20px;
   right: 80px;
+  animation: ${animation.blink2} 1.2s infinite;
   & :hover {
     cursor: pointer;
   }
@@ -32,6 +34,7 @@ const DarkButton = styled(MoonStarsFill)`
   position: fixed;
   bottom: 20px;
   right: 80px;
+  animation: ${animation.blink2} 1.2s infinite;
   & :hover {
     cursor: pointer;
   }

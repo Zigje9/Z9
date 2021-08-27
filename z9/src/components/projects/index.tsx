@@ -15,7 +15,7 @@ interface CardProps {
 
 const ProjectsContainer = styled.div`
   height: 100vh;
-  background-color: #262424;
+  background-color: ${(props) => props.theme.color.projects.background};
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -35,7 +35,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.p`
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   font-size: 6rem;
   line-height: 1%;
   @media ${(props) => props.theme.mobile} {

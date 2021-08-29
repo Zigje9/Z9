@@ -58,7 +58,7 @@ const NullContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  color: white;
+  color: ${(props) => props.theme.color.projects.text};
   @media ${(props) => props.theme.mobile} {
     font-size: 1.2rem;
   }

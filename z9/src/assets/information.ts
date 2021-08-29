@@ -43,6 +43,12 @@ export const experience = {
     '자바스크립트 웹 풀스택 과정 챌린지 & 멤버십',
     '20.07~20.12',
   ],
+  card3: [
+    'YAPP 19th',
+    '대학생 연합 기업형 IT 동아리',
+    'Web Frontend 개발',
+    '21.08~22.01',
+  ],
 };
 
 export const skills = {

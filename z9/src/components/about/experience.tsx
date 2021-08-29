@@ -147,13 +147,19 @@ const Experience: React.FC = () => {
           </DownContainer>
         </TimelineContainer>
         <TimelineContainer>
-          <UpConatiner></UpConatiner>
+          <UpConatiner>
+            <Title>{info.experience.card3[0]}</Title>
+            <Host>{info.experience.card3[1]}</Host>
+            <Contents>{info.experience.card3[2]}</Contents>
+          </UpConatiner>
           <CenterContainer>
             <Line />
             <Circle></Circle>
             <Line />
           </CenterContainer>
-          <DownContainer></DownContainer>
+          <DownContainer>
+            <Period>{info.experience.card3[3]}</Period>
+          </DownContainer>
         </TimelineContainer>
       </ExperienceContainer>
     </Background>

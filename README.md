@@ -9,6 +9,6 @@ http://www.zigje9.kro.kr
 
 2021.08.01 ~ ing
 
-- pc, mobile, tablet 반응형 작업을 계속 진행중 입니다.
+- pc, mobile, tablet 반응형 
 
 - dark mode & light mode 지원

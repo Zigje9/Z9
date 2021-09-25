@@ -6,9 +6,6 @@
 http://www.zigje9.kro.kr
 
 
-
-2021.08.01 ~ ing
-
 - pc, mobile, tablet 반응형 
 
 - dark mode & light mode 지원
